@@ -1,64 +1,78 @@
-import { Palette, Scissors, Sparkles, Shirt } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { ArrowRight } from "lucide-react";
+import courseImage from "../../assets/images/course.png";
 
 export default function Programs() {
+	const { t } = useTranslation();
+
 	const programs = [
 		{
-			icon: Palette,
-			title: "Makeup Artistry",
-			description:
-				"Master the art of makeup from basics to advanced techniques. Learn color theory, skin care, and special effects makeup.",
+			id: 1,
+			title: t("programs.makeup"),
+			description: t("programs.makeupDesc"),
 		},
 		{
-			icon: Scissors,
-			title: "Hair Styling",
-			description:
-				"Professional hair cutting, coloring, and styling courses. From trendy cuts to bridal styles and everything in between.",
+			id: 2,
+			title: t("programs.hair"),
+			description: t("programs.hairDesc"),
 		},
 		{
-			icon: Sparkles,
-			title: "Beauty Therapy",
-			description:
-				"Complete beauty therapy training including skincare, waxing, threading, and wellness therapies.",
+			id: 3,
+			title: t("programs.beauty"),
+			description: t("programs.beautyDesc"),
 		},
 		{
-			icon: Shirt,
-			title: "Fashion Design",
-			description:
-				"Learn fashion design principles, pattern making, sewing, and collection creation from industry experts.",
+			id: 4,
+			title: t("programs.fashion"),
+			description: t("programs.fashionDesc"),
 		},
 	];
 
 	return (
-		<section className="py-20 bg-gray-50">
-			<div className="max-w-6xl mx-auto px-4">
+		<section className="py-20 bg-white">
+			<div className="max-w-7xl mx-auto px-4">
+				{/* Section Header */}
 				<div className="text-center mb-16">
-					<h2 className="text-4xl font-bold text-gray-900 mb-4">
-						Our Programs
+					<h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+						{t("programs.title")}
 					</h2>
 					<p className="text-lg text-gray-600 max-w-2xl mx-auto">
-						Comprehensive training in beauty and fashion with hands-on
-						experience from industry professionals.
+						{t("programs.subtitle")}
 					</p>
 				</div>
 
+				{/* Course Cards Grid */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					{programs.map((program, index) => {
-						const IconComponent = program.icon;
-						return (
-							<div
-								key={index}
-								className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-								<IconComponent className="text-purple-600 mb-4" size={40} />
-								<h3 className="text-xl font-bold text-gray-900 mb-2">
+					{programs.map((program) => (
+						<div
+							key={program.id}
+							className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+							{/* Course Image */}
+							<div className="relative h-48 overflow-hidden bg-gray-200">
+								<img
+									src={courseImage}
+									alt={program.title}
+									className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+								/>
+								{/* Overlay on hover */}
+								<div className="absolute inset-0 bg-[#68226A]/0 hover:bg-[#68226A]/40 transition-colors duration-300"></div>
+							</div>
+
+							{/* Course Content */}
+							<div className="p-6">
+								<h3 className="text-xl font-bold text-gray-900 mb-3">
 									{program.title}
 								</h3>
-								<p className="text-gray-600">{program.description}</p>
-								<button className="mt-4 text-purple-600 font-semibold hover:text-purple-700 transition-colors">
-									Learn More →
+								<p className="text-gray-600 text-sm mb-4 line-clamp-3">
+									{program.description}
+								</p>
+								<button className="inline-flex items-center gap-2 text-[#EE048B] font-bold hover:text-[#68226A] transition-colors duration-300">
+									{t("programs.learnMore")}
+									<ArrowRight className="w-4 h-4" />
 								</button>
 							</div>
-						);
-					})}
+						</div>
+					))}
 				</div>
 			</div>
 		</section>

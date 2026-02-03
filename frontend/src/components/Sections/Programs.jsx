@@ -298,17 +298,18 @@ export default function Programs() {
 												{i18n.language === "sw" ? "Ada:" : "Fee:"}
 											</p>
 											<p className="text-xs font-bold text-gray-900">
-												{program.price}
+												TZS {program.price}
 											</p>
 										</div>
 										<div className="bg-green-50 rounded px-2 py-1.5">
 											<p className="text-xs text-gray-600">
+												{" "}
 												{i18n.language === "sw"
 													? "Ada + Hostel:"
 													: "Fee + Hostel:"}
 											</p>
 											<p className="text-xs font-bold text-[#EE048B]">
-												{program.hostelPrice}
+												TZS {program.hostelPrice}
 											</p>
 										</div>
 									</div>

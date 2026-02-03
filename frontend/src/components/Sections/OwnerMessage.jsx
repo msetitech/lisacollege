@@ -19,14 +19,14 @@ export default function OwnerMessage() {
 					</div>
 
 					{/* Right: Dark Background with Content */}
-					<div className="bg-[#68226A] px-8 md:px-12 py-7 md:py-10 flex flex-col justify-center">
-						<h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+					<div className="bg-[#68226A] px-8 md:px-12 py-8 md:py-12 flex flex-col justify-center">
+						<h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
 							{t("owner.title")}
 						</h2>
-						<p className="text-gray-200 text-sm md:text-base leading-relaxed mb-5">
+						<p className="text-gray-200 text-sm md:text-base leading-relaxed mb-6">
 							{t("owner.message")}
 						</p>
-						<div className="mb-5">
+						<div className="mb-6">
 							<p className="text-base font-bold text-white">
 								{t("owner.name")}
 							</p>

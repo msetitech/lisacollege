@@ -6,14 +6,13 @@ export default function Hero() {
 
 	return (
 		<section
-			className="pt-20 relative h-screen bg-cover bg-center bg-no-repeat"
+			className="relative w-screen h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
 			style={{
 				backgroundImage: `url(${heroImage})`,
+				height: "100vh",
 			}}>
 			{/* Dark Overlay */}
-			<div className="absolute inset-0 bg-gradient-to-r from-[#68226A]/95 via-[#68226A]/90 to-transparent"></div>
-
-			{/* Content */}
+			<div className="absolute inset-0 bg-[#68226A]/92"></div>
 			<div className="relative max-w-6xl mx-auto px-4 h-full flex flex-col justify-center">
 				<div className="max-w-2xl">
 					{/* Subtitle */}
@@ -44,7 +43,7 @@ export default function Hero() {
 			</div>
 
 			{/* Bottom Feature Bar */}
-			<div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-11/12 max-w-6xl -mb-20 rounded-t-3xl bg-gradient-to-r from-[#68226A] to-[#EE048B] py-8">
+			<div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-11/12 max-w-6xl -mb-20 rounded-2xl bg-[#68226A] py-8">
 				<div className="px-4">
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-white">
 						<div className="text-center">

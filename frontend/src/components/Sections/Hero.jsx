@@ -143,7 +143,7 @@ export default function Hero() {
 					{/* Hostel Toggle */}
 					<div>
 						<label className="text-xs font-semibold text-gray-600 block mb-2">
-							Hostel
+							{t("hero.filterHostel")}
 						</label>
 						<button
 							onClick={() => handleFilter("hostel", !filters.hostel)}
@@ -152,7 +152,7 @@ export default function Hero() {
 									? "bg-[#68226A] text-white border-[#68226A]"
 									: "bg-white text-gray-700 border-gray-300 hover:border-[#68226A]"
 							}`}>
-							With Hostel
+							{t("hero.withHostel")}
 						</button>
 					</div>
 
@@ -161,7 +161,7 @@ export default function Hero() {
 						<button
 							onClick={handleSearch}
 							className="w-full bg-[#EE048B] hover:bg-[#d60278] text-white font-bold py-2 rounded-lg transition-all transform hover:scale-105">
-							Search
+							{t("hero.searchBtn")}
 						</button>
 					</div>
 				</div>

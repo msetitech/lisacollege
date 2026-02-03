@@ -266,62 +266,57 @@ export default function Programs() {
 								</div>
 
 								{/* Course Content */}
-								<div className="p-5">
+								<div className="p-4">
 									<h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
 										{getTitle(program)}
 									</h3>
-									<p className="text-gray-600 text-sm mb-4 line-clamp-2">
+									<p className="text-gray-600 text-xs mb-3 line-clamp-2">
 										{getDescription(program)}
 									</p>
 
-									{/* Duration with Icon */}
-									<div className="mb-4 flex items-center gap-2 bg-gray-50 rounded-lg px-3 py-2">
-										<Clock className="w-4 h-4 text-[#68226A]" />
-										<span className="text-sm font-bold text-gray-900">
-											{getDuration(program)}
-										</span>
-									</div>
-
-									{/* Price and Hostel Options */}
-									<div className="mb-4">
-										<div className="flex items-center gap-2 bg-blue-50 rounded-lg px-3 py-2 mb-2">
-											<DollarSign className="w-4 h-4 text-[#68226A]" />
-											<div>
-												<p className="text-xs text-gray-600">
-													{i18n.language === "sw" ? "Ada:" : "Fee:"}
-												</p>
-												<p className="text-sm font-bold text-gray-900">
-													TSh {program.price}
-												</p>
-											</div>
+									{/* Row 1: Duration & Students */}
+									<div className="grid grid-cols-2 gap-2 mb-3">
+										<div className="flex items-center gap-1 bg-gray-50 rounded px-2 py-1.5">
+											<Clock className="w-3 h-3 text-[#68226A]" />
+											<span className="text-xs font-bold text-gray-900">
+												{getDuration(program)}
+											</span>
 										</div>
-										<div className="flex items-center gap-2 bg-green-50 rounded-lg px-3 py-2">
-											<DollarSign className="w-4 h-4 text-[#EE048B]" />
-											<div>
-												<p className="text-xs text-gray-600">
-													{i18n.language === "sw"
-														? "Pamoja na Hostel:"
-														: "With Hostel:"}
-												</p>
-												<p className="text-sm font-bold text-[#EE048B]">
-													TSh {program.hostelPrice}
-												</p>
-											</div>
+										<div className="flex items-center gap-1 bg-blue-50 rounded px-2 py-1.5">
+											<Star className="w-3 h-3 text-[#FFC107]" />
+											<span className="text-xs font-bold text-gray-900">
+												{program.reviews}{" "}
+												{i18n.language === "sw" ? "wanafunzi" : "students"}
+											</span>
 										</div>
 									</div>
 
-									{/* Reviews Count */}
-									<div className="mb-4">
-										<p className="text-xs text-gray-500">
-											{program.reviews}{" "}
-											{program.reviews === 1 ? "review" : "reviews"}
-										</p>
+									{/* Row 2: Prices */}
+									<div className="grid grid-cols-2 gap-2 mb-4">
+										<div className="bg-blue-50 rounded px-2 py-1.5">
+											<p className="text-xs text-gray-600">
+												{i18n.language === "sw" ? "Ada:" : "Fee:"}
+											</p>
+											<p className="text-xs font-bold text-gray-900">
+												{program.price}
+											</p>
+										</div>
+										<div className="bg-green-50 rounded px-2 py-1.5">
+											<p className="text-xs text-gray-600">
+												{i18n.language === "sw"
+													? "Ada + Hostel:"
+													: "Fee + Hostel:"}
+											</p>
+											<p className="text-xs font-bold text-[#EE048B]">
+												{program.hostelPrice}
+											</p>
+										</div>
 									</div>
 
 									{/* Learn More Button */}
-									<button className="w-full inline-flex items-center justify-center gap-2 text-[#EE048B] font-bold hover:text-[#68226A] transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-50">
+									<button className="w-full inline-flex items-center justify-center gap-2 text-[#EE048B] font-bold hover:text-[#68226A] transition-colors duration-300 py-2 px-2 rounded text-sm hover:bg-gray-50">
 										{t("programs.learnMore")}
-										<ArrowRight className="w-4 h-4" />
+										<ArrowRight className="w-3 h-3" />
 									</button>
 								</div>
 							</div>

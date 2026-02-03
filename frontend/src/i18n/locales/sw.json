@@ -48,18 +48,61 @@
 		"fashionDesc": "Jifunze miundo ya mitindo, kujenga mifumo, kushona, na kujenga mkutano kutoka kwa wataalamu wa kiwanda.",
 		"learnMore": "Jifunze Zaidi"
 	},
+
 	"about": {
-		"title": "Kuhusu LISA College",
-		"para1": "Tangu 2010, LISA College imekuwa katika mbele ya elimu ya uzuri na mitindo, na inazalisha wataalamu wenye ujuzi mwingi wanaofanikiwa katika kazi zao.",
-		"para2": "Miundombinu yetu ya kisasa, waalimu wenye uzoefu, na ushirikiano wa kiwanda huhakikisha kuwa wanafunzi wetu wanapokea mafunzo ya kiwanda na nafasi za kazi.",
-		"point1": "Mtaala wa sasa unaostokiana na viwango vya kiwanda",
-		"point2": "Mafunzo ya kujenga na kujenga kwa kutumimaisha vifaa vya kitaalamu",
-		"point3": "Kusaidia mahali pa kazi na stadi za ndani",
-		"point4": "Vyombo vya kufanya stadi vya kimataifa",
-		"years": "Miaka ya Ubora",
-		"students": "Wanafunzi waliohitimu",
-		"courses": "Kozi za Kitaalamu",
-		"countries": "Wanyonge wa Ulimwengu"
+		"label": "Kuhusu Sisi",
+		"title": "Kuhusu",
+		"titleHighlight": "LISA College",
+		"description1": "Tangu mwaka 2010, LISA College imekuwa kiongozi katika elimu ya uzuri na fashon nchini Tanzania, ikitoa wataalamu wenye ujuzi wa kufanya kazi vizuri duniani kote.",
+		"description2": "Vifaa vyetu vya kisasa, wakufunzi wenye uzoefu, na ushirikiano na viwanda vinahakikisha kwamba kila mwanafunzi anapokea mafunzo ya kisasa na fursa za kweli za kazi.",
+		"highlights": {
+			"curriculum": "Mtaala wa kisasa unaofuata viwango vya viwanda",
+			"training": "Mafunzo ya vitendo na vifaa vya kitaalamu",
+			"career": "Msaada wa kupata kazi na fursa za mafunzo",
+			"certification": "Vyeti vinavyotambuliwa duniani baada ya kukamilisha mafunzo"
+		},
+		"stats": {
+			"years": "Miaka ya Ubora",
+			"graduates": "Wanafunzi Waliohusika",
+			"courses": "Kozi za Kitaalamu",
+			"countries": "Nchi Zilizofika"
+		}
+	},
+	"environment": {
+		"label": "Mazingira Yetu",
+		"title": "Jifunze na Kufanya Kazi katika",
+		"titleHighlight": "Mazingira ya Kisasa",
+		"subtitle": "Mazingira ya kisasa na vitendo yaliyoundwa kukusaidia kuwa tayari kwa kazi ya kweli katika uzuri, fashon na muundo.",
+		"heroAlt": "Wanafunzi wakifanya ususi",
+		"heroTag": "Saluni ya Halisi",
+		"heroTitle": "Wateja wa Kweli, Uzoefu wa Kweli",
+		"heroDesc": "Wanafunzi wanafanya kazi na wateja wa kweli ndani ya saluni yetu kila siku.",
+		"labAlt": "Chumba cha makeup na kucha",
+		"labTitle": "Chumba cha Makeup & Kucha",
+		"classAlt": "Darasa la kisasa",
+		"classTitle": "Madarasa ya Kisasa",
+		"hostelAlt": "Hostel ya wanafunzi",
+		"hostelTitle": "Hostel ya Wanafunzi",
+		"practiceAlt": "Wanafunzi wakifanya mazoezi",
+		"practiceTitle": "Mazoezi ya Vitendo",
+		"features": {
+			"salon": {
+				"title": "Saluni ya Ndani",
+				"desc": "Saluni iliyoboreshwa kikamilifu ambapo wanafunzi wanapata uzoefu wa kweli na wateja halisi."
+			},
+			"modern": {
+				"title": "Vifaa vya Kisasa",
+				"desc": "Zana na bidhaa zinazotumika viwandani — sawa na zinazotumika na saluni bora duniani."
+			},
+			"library": {
+				"title": "Rasilimali za Kujifunza",
+				"desc": "Eneo la kujifunza lenye vitabu, video na kumbukumbu zinazopatikana wakati wowote."
+			},
+			"mentors": {
+				"title": "Washauri Bora",
+				"desc": "Wakufunzi wenye uzoefu na vyeti wanakusaidia na kukuongoza katika kila hatua ya safari yako."
+			}
+		}
 	},
 	"testimonials": {
 		"title": "Hadithi za Mafaniko ya Wanafunzi",

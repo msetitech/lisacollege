@@ -7,7 +7,7 @@ export default function OwnerMessage() {
 
 	return (
 		<section className="pt-10 pb-8 bg-white relative z-10">
-			<div className="max-w-7xl mx-auto px-16">
+			<div className="max-w-7xl mx-auto px-6">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch min-h-80">
 					{/* Left: Owner Image */}
 					<div className="flex items-center justify-center overflow-hidden h-full">

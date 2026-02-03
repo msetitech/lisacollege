@@ -48,18 +48,61 @@
 		"fashionDesc": "Learn fashion design principles, pattern making, sewing, and collection creation from industry experts.",
 		"learnMore": "Learn More"
 	},
+
 	"about": {
-		"title": "About LISA College",
-		"para1": "Since 2010, LISA College has been at the forefront of beauty and fashion education, producing highly skilled professionals who excel in their careers.",
-		"para2": "Our state-of-the-art facilities, experienced instructors, and industry partnerships ensure that our students receive world-class training and career opportunities.",
-		"point1": "Contemporary curriculum aligned with industry standards",
-		"point2": "Hands-on training with professional equipment",
-		"point3": "Career placement assistance and internships",
-		"point4": "Internationally recognized certifications",
-		"years": "Years of Excellence",
-		"students": "Students Graduated",
-		"courses": "Professional Courses",
-		"countries": "Global Reach"
+		"label": "About Us",
+		"title": "About",
+		"titleHighlight": "LISA College",
+		"description1": "Since 2010, LISA College has been at the forefront of beauty and fashion education in Tanzania, producing highly skilled professionals who excel in their careers across the globe.",
+		"description2": "Our state-of-the-art facilities, experienced instructors, and strong industry partnerships ensure that every student receives world-class, hands-on training and real career opportunities.",
+		"highlights": {
+			"curriculum": "Contemporary curriculum aligned with industry standards",
+			"training": "Hands-on training with professional equipment",
+			"career": "Career placement assistance and internship opportunities",
+			"certification": "Internationally recognised certifications upon graduation"
+		},
+		"stats": {
+			"years": "Years of Excellence",
+			"graduates": "Students Graduated",
+			"courses": "Professional Courses",
+			"countries": "Countries Reached"
+		}
+	},
+	"environment": {
+		"label": "Our Environment",
+		"title": "Learn & Practise in a",
+		"titleHighlight": "World-Class Setting",
+		"subtitle": "A modern, hands-on environment designed to prepare you for a real career in beauty, fashion and design.",
+		"heroAlt": "Students practising hair styling",
+		"heroTag": "Live Salon",
+		"heroTitle": "Real Clients, Real Experience",
+		"heroDesc": "Students practise on real clients inside our in-house salon every day.",
+		"labAlt": "Makeup and nail art lab",
+		"labTitle": "Makeup & Nail Lab",
+		"classAlt": "Modern classroom",
+		"classTitle": "Modern Classrooms",
+		"hostelAlt": "Student hostel",
+		"hostelTitle": "Student Hostel",
+		"practiceAlt": "Students practising skills",
+		"practiceTitle": "Hands-On Practice",
+		"features": {
+			"salon": {
+				"title": "In-House Salon",
+				"desc": "A fully equipped professional salon where students gain real experience serving actual clients."
+			},
+			"modern": {
+				"title": "Modern Equipment",
+				"desc": "Industry-standard tools and products used daily — the same ones top salons rely on."
+			},
+			"library": {
+				"title": "Learning Resources",
+				"desc": "A dedicated study area with books, videos and reference materials available any time."
+			},
+			"mentors": {
+				"title": "Expert Mentors",
+				"desc": "Experienced, certified instructors guide and coach you through every step of your journey."
+			}
+		}
 	},
 	"testimonials": {
 		"title": "Student Success Stories",

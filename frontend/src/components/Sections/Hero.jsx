@@ -49,19 +49,14 @@ export default function Hero() {
 			{/* Dark Overlay */}
 			<div className="absolute inset-0 bg-[#68226A]/65"></div>
 			<div className="relative max-w-6xl mx-auto px-4 h-full flex flex-col justify-center">
-				<div className="max-w-2xl">
-					{/* Subtitle */}
-					<p className="text-[#FFC107] text-lg font-semibold mb-4 uppercase tracking-wider">
-						Professional Vocational Training
-					</p>
-
+				<div className="max-w-2xl text-center md:text-left">
 					{/* Main Title */}
-					<h1 className="text-6xl md:text-7xl font-bold text-white mb-6 leading-tight">
+					<h1 className="text-5xl md:text-6xl font-bold text-white mb-3 leading-tight">
 						{t("hero.mainTitle")}
 					</h1>
 
 					{/* Description */}
-					<p className="text-xl text-gray-100 mb-8 leading-relaxed max-w-xl">
+					<p className="text-lg text-gray-100 mb-6 leading-relaxed max-w-xl">
 						{t("hero.mainSubtitle")}
 					</p>
 
@@ -78,7 +73,7 @@ export default function Hero() {
 			</div>
 
 			{/* Search & Filter Bar */}
-			<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-11/12 max-w-6xl rounded-2xl bg-white p-6 shadow-2xl">
+			<div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-11/12 max-w-6xl rounded-lg bg-white p-6 shadow-2xl">
 				{/* Search Input */}
 				<div className="mb-6 flex items-center bg-gray-50 rounded-lg px-4 py-2 border border-gray-200">
 					<Search className="text-gray-400 w-5 h-5 mr-3" />

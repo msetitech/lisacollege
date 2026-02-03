@@ -9,17 +9,24 @@
 		"contact": "Wasiliana"
 	},
 	"hero": {
-		"mainTitle": "LISA COLLEGE – Kozi za Mafunzo ya Ufundi",
-		"mainSubtitle": "Mafunzo ya kitaalamu ya Urembo, Mitindo ya Mavazi na Stadi za Kujiajiri\n\nLISA College inatoa mafunzo ya vitendo yanayolenga kukuza ujuzi wa ajira na ujasiriamali.",
+		"mainTitle": "LISA COLLEGE – Mafunzo ya Urembo na Mitindo",
+		"mainSubtitle": "Mafunzo ya kitaalamu – Badilisha shauku yako kuwa ajira yenye mafaniko.",
 		"tourBtn": "Tembelea Chuo",
 		"exploreBtn": "Chunguza Programu",
 		"courses": "Kozi za Kitaalamu",
 		"graduates": "Waliohitimu",
 		"years": "Miaka ya Ubora",
 		"countries": "Ulimwengu wa Wanyonge",
-		"title": "Karibu katika LISA College",
-		"subtitle": "Ubora katika Elimu ya Uzuri na Mitindo. Badilisha Shauku Yako kuwa Kazi.",
-		"learnBtn": "Jifunze Zaidi"
+		"searchPlaceholder": "Tafuta kozi...",
+		"filterCategory": "Kategoria",
+		"filterDuration": "Muda",
+		"filterPrice": "Eneo la Bei",
+		"filterHostel": "Nyumba ya Wanafunzi",
+		"selectCategory": "Chagua Kategoria",
+		"selectDuration": "Chagua Muda",
+		"selectPrice": "Chagua Bei",
+		"withHostel": "Kwa Nyumba ya Wanafunzi",
+		"searchBtn": "Tafuta"
 	},
 	"programs": {
 		"title": "Programu Zetu",

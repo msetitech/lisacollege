@@ -28,6 +28,12 @@
 		"withHostel": "With Hostel",
 		"searchBtn": "Search"
 	},
+	"owner": {
+		"title": "Welcome to LISA College",
+		"message": "Greetings to all our valued members and students! Since founding LISA College, my mission has been to provide world-class vocational training in beauty and fashion. We believe that every student has the potential to transform their passion into a successful career. Our commitment is to offer affordable, quality education with hands-on training from industry professionals. Thank you for being part of our growing family!",
+		"name": "LISA Founder",
+		"position": "Director, LISA College"
+	},
 	"programs": {
 		"title": "Our Programs",
 		"subtitle": "Comprehensive training in beauty and fashion with hands-on experience from industry professionals.",

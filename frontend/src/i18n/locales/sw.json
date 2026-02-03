@@ -28,6 +28,12 @@
 		"withHostel": "na Hostel ",
 		"searchBtn": "Tafuta"
 	},
+	"owner": {
+		"title": "Karibu katika LISA College",
+		"message": "Salamu kwa wote wa wanachama na wanafunzi wangu! Tangu kuanzisha LISA College, lengo langu imekuwa kutoa mafunzo ya kiwanda ya kundi-klas katika uzuri na mitindo. Tunaninzia kuwa kila mwanafunzi ana uwezo wa kubadilisha shauku yao kuwa kazi yenye mafaniko. Dhana yetu ni kutoa elimu rahisi, ya bei nzuri na mafunzo ya kujenga kutoka kwa wataalamu wa kiwanda. Asanteni kwa kuwa sehemu ya famiglia yangu inayokua!",
+		"name": "LISA Msingi",
+		"position": "Mkurugenzi, LISA College"
+	},
 	"programs": {
 		"title": "Programu Zetu",
 		"subtitle": "Mafunzo ya kina katika uzuri na mitindo na uzoefu wa kujenga kutoka kwa wataalamu wa kiwanda.",

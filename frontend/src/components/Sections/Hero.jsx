@@ -79,7 +79,7 @@ export default function Hero() {
 					<Search className="text-gray-400 w-5 h-5 mr-3" />
 					<input
 						type="text"
-						placeholder="Search courses..."
+						placeholder={t("hero.searchPlaceholder")}
 						className="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-400"
 					/>
 				</div>
@@ -89,13 +89,13 @@ export default function Hero() {
 					{/* Category Filter */}
 					<div>
 						<label className="text-xs font-semibold text-gray-600 block mb-2">
-							Category
+							{t("hero.filterCategory")}
 						</label>
 						<select
 							value={filters.category}
 							onChange={(e) => handleFilter("category", e.target.value)}
 							className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700 focus:outline-none focus:border-[#68226A]">
-							<option value="">Select Category</option>
+							<option value="">{t("hero.selectCategory")}</option>
 							{categories.map((cat) => (
 								<option key={cat} value={cat}>
 									{cat}
@@ -107,13 +107,13 @@ export default function Hero() {
 					{/* Duration Filter */}
 					<div>
 						<label className="text-xs font-semibold text-gray-600 block mb-2">
-							Duration
+							{t("hero.filterDuration")}
 						</label>
 						<select
 							value={filters.duration}
 							onChange={(e) => handleFilter("duration", e.target.value)}
 							className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700 focus:outline-none focus:border-[#68226A]">
-							<option value="">Select Duration</option>
+							<option value="">{t("hero.selectDuration")}</option>
 							{durations.map((dur) => (
 								<option key={dur} value={dur}>
 									{dur}
@@ -125,13 +125,13 @@ export default function Hero() {
 					{/* Price Filter */}
 					<div>
 						<label className="text-xs font-semibold text-gray-600 block mb-2">
-							Price Range
+							{t("hero.filterPrice")}
 						</label>
 						<select
 							value={filters.price}
 							onChange={(e) => handleFilter("price", e.target.value)}
 							className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-700 focus:outline-none focus:border-[#68226A]">
-							<option value="">Select Price</option>
+							<option value="">{t("hero.selectPrice")}</option>
 							{priceRanges.map((price) => (
 								<option key={price} value={price}>
 									{price}

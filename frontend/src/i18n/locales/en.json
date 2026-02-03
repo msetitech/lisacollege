@@ -1,0 +1,79 @@
+{
+	"nav": {
+		"home": "Home",
+		"programs": "Programs",
+		"about": "About",
+		"gallery": "Gallery",
+		"events": "Events",
+		"news": "News",
+		"contact": "Contact"
+	},
+	"hero": {
+		"title": "Welcome to LISA College",
+		"subtitle": "Excellence in Beauty & Fashion Education. Transform Your Passion into a Career.",
+		"exploreBtn": "Explore Programs",
+		"learnBtn": "Learn More"
+	},
+	"programs": {
+		"title": "Our Programs",
+		"subtitle": "Comprehensive training in beauty and fashion with hands-on experience from industry professionals.",
+		"makeup": "Makeup Artistry",
+		"makeupDesc": "Master the art of makeup from basics to advanced techniques. Learn color theory, skin care, and special effects makeup.",
+		"hair": "Hair Styling",
+		"hairDesc": "Professional hair cutting, coloring, and styling courses. From trendy cuts to bridal styles and everything in between.",
+		"beauty": "Beauty Therapy",
+		"beautyDesc": "Complete beauty therapy training including skincare, waxing, threading, and wellness therapies.",
+		"fashion": "Fashion Design",
+		"fashionDesc": "Learn fashion design principles, pattern making, sewing, and collection creation from industry experts.",
+		"learnMore": "Learn More"
+	},
+	"about": {
+		"title": "About LISA College",
+		"para1": "Since 2010, LISA College has been at the forefront of beauty and fashion education, producing highly skilled professionals who excel in their careers.",
+		"para2": "Our state-of-the-art facilities, experienced instructors, and industry partnerships ensure that our students receive world-class training and career opportunities.",
+		"point1": "Contemporary curriculum aligned with industry standards",
+		"point2": "Hands-on training with professional equipment",
+		"point3": "Career placement assistance and internships",
+		"point4": "Internationally recognized certifications",
+		"years": "Years of Excellence",
+		"students": "Students Graduated",
+		"courses": "Professional Courses",
+		"countries": "Global Reach"
+	},
+	"testimonials": {
+		"title": "Student Success Stories",
+		"subtitle": "Hear from our successful graduates who are making waves in the beauty and fashion industry.",
+		"test1": "LISA College completely transformed my career. The hands-on training and mentorship I received helped me launch my own makeup line. Best decision ever!",
+		"test2": "The fashion design program is incredible. The instructors are industry professionals who taught me everything I needed to know to work with top fashion brands.",
+		"test3": "From zero experience to opening my own salon in just 10 months. LISA College's curriculum and support made it all possible."
+	},
+	"cta": {
+		"title": "Ready to Start Your Journey?",
+		"subtitle": "Join hundreds of students who have transformed their passion into a successful career. Enroll now and get special discounts for early registrations.",
+		"applyBtn": "Apply Now",
+		"tourBtn": "Schedule a Tour"
+	},
+	"footer": {
+		"aboutTitle": "LISA COLLEGE",
+		"aboutDesc": "Excellence in beauty and fashion education since 2010. Empowering students with skills and confidence.",
+		"quickLinks": "Quick Links",
+		"programs": "Programs",
+		"aboutUs": "About Us",
+		"gallery": "Gallery",
+		"events": "Events",
+		"mainPrograms": "Programs",
+		"makeupArtistry": "Makeup Artistry",
+		"fashionDesign": "Fashion Design",
+		"hairStyling": "Hair Styling",
+		"beautyTherapy": "Beauty Therapy",
+		"styling": "Styling & Wardrobe",
+		"contactUs": "Contact Us",
+		"address1": "123 Fashion Street",
+		"address2": "New York, NY 10001",
+		"phone": "+1 (234) 567-890",
+		"email": "info@lisacollege.com",
+		"copyright": "© 2024 LISA College. All rights reserved.",
+		"privacy": "Privacy Policy",
+		"terms": "Terms of Service"
+	}
+}

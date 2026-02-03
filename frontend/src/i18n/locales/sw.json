@@ -1,0 +1,79 @@
+{
+	"nav": {
+		"home": "Nyumbani",
+		"programs": "Programu",
+		"about": "Kuhusu",
+		"gallery": "Showani",
+		"events": "Matukio",
+		"news": "Habari",
+		"contact": "Wasiliana"
+	},
+	"hero": {
+		"title": "Karibu katika LISA College",
+		"subtitle": "Ubora katika Elimu ya Uzuri na Mitindo. Badilisha Shauku Yako kuwa Kazi.",
+		"exploreBtn": "Chunguza Programu",
+		"learnBtn": "Jifunze Zaidi"
+	},
+	"programs": {
+		"title": "Programu Zetu",
+		"subtitle": "Mafunzo ya kina katika uzuri na mitindo na uzoefu wa kujenga kutoka kwa wataalamu wa kiwanda.",
+		"makeup": "Sanaa ya Cosmetics",
+		"makeupDesc": "Kuwa bwana wa sanaa ya cosmetics kutoka kwa kiwango cha msingi hadi kwa mbinu za juu. Jifunze nadharia ya rangi, huduma ya ngozi, na cosmetics ya athari maalum.",
+		"hair": "Kuboresha Nywele",
+		"hairDesc": "Kozi za kitaalamu za kukata nywele, rangu, na kujenga mitindo. Kutoka kwa kujenga mitindo ya kimubuni hadi kwa mitindo ya sherehe na mengine mengi.",
+		"beauty": "Huduma ya Uzuri",
+		"beautyDesc": "Mafunzo kamili ya huduma ya uzuri ikiwa ni pamoja na huduma ya ngozi, kuvuta nywele, kupiga, na huduma za afya.",
+		"fashion": "Muundo wa Mitindo",
+		"fashionDesc": "Jifunze miundo ya mitindo, kujenga mifumo, kushona, na kujenga mkutano kutoka kwa wataalamu wa kiwanda.",
+		"learnMore": "Jifunze Zaidi"
+	},
+	"about": {
+		"title": "Kuhusu LISA College",
+		"para1": "Tangu 2010, LISA College imekuwa katika mbele ya elimu ya uzuri na mitindo, na inazalisha wataalamu wenye ujuzi mwingi wanaofanikiwa katika kazi zao.",
+		"para2": "Miundombinu yetu ya kisasa, waalimu wenye uzoefu, na ushirikiano wa kiwanda huhakikisha kuwa wanafunzi wetu wanapokea mafunzo ya kiwanda na nafasi za kazi.",
+		"point1": "Mtaala wa sasa unaostokiana na viwango vya kiwanda",
+		"point2": "Mafunzo ya kujenga na kujenga kwa kutumimaisha vifaa vya kitaalamu",
+		"point3": "Kusaidia mahali pa kazi na stadi za ndani",
+		"point4": "Vyombo vya kufanya stadi vya kimataifa",
+		"years": "Miaka ya Ubora",
+		"students": "Wanafunzi waliohitimu",
+		"courses": "Kozi za Kitaalamu",
+		"countries": "Wanyonge wa Ulimwengu"
+	},
+	"testimonials": {
+		"title": "Hadithi za Mafaniko ya Wanafunzi",
+		"subtitle": "Sisikiliza kutokana na walimu wetu waliofanikiwa wanaotengeneza mawimbi katika kiwanda cha uzuri na mitindo.",
+		"test1": "LISA College ndiyo ilinibadilisha kazi yangu. Mafunzo ya kujenga na msaada niliyopokea yaliuza kwa kusambaza kwa mkutano wangu wa cosmetics. Uamuzi wa ziada!",
+		"test2": "Programu ya muundo wa mitindo ni ya ajabu. Waalimu ni wataalamu wa kiwanda walionionesha kila kitu ninachohitaji jua kuarbeji na tarakimu za ziada wa kusambaza.",
+		"test3": "Kutokana na sifuri ya uzoefu hadi kwa kusambaza salon yangu ndani ya miezi 10. Mtaala wa LISA College na msaada uliweza kuundwa."
+	},
+	"cta": {
+		"title": "Jandilizika kuanza safari yako?",
+		"subtitle": "Kubeli na marafiki wanasambaza na kusambaza shauku yao kuwa kazi yenye mafaniko. Jiandikishe sasa na kupokea punguzo maalum kwa usajili wa mapema.",
+		"applyBtn": "Jiandikishe Sasa",
+		"tourBtn": "Jadwalisha Ziyara"
+	},
+	"footer": {
+		"aboutTitle": "LISA COLLEGE",
+		"aboutDesc": "Ubora katika elimu ya uzuri na mitindo tangu 2010. Kukamatia wanafunzi wenye ujuzi na ujasiri.",
+		"quickLinks": "Kiungo cha Haraka",
+		"programs": "Programu",
+		"aboutUs": "Kuhusu Sisi",
+		"gallery": "Showani",
+		"events": "Matukio",
+		"mainPrograms": "Programu",
+		"makeupArtistry": "Sanaa ya Cosmetics",
+		"fashionDesign": "Muundo wa Mitindo",
+		"hairStyling": "Kuboresha Nywele",
+		"beautyTherapy": "Huduma ya Uzuri",
+		"styling": "Kuboresha & Mavazi",
+		"contactUs": "Wasiliana",
+		"address1": "123 Barabara ya Mitindo",
+		"address2": "Dar es Salaam, 10001",
+		"phone": "+255 (234) 567-890",
+		"email": "info@lisacollege.com",
+		"copyright": "© 2024 LISA College. Haki zote zimehifadhiwa.",
+		"privacy": "Sera ya Binafsi",
+		"terms": "Masharti ya Huduma"
+	}
+}

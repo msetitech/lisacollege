@@ -9,9 +9,16 @@
 		"contact": "Contact"
 	},
 	"hero": {
+		"mainTitle": "LISA COLLEGE – Training Programs",
+		"mainSubtitle": "Professional Vocational Training in Beauty, Fashion & Skills Development\n\nLISA College Gharama offers practical, career-focused courses designed to equip students with employable skills and entrepreneurship knowledge.",
+		"tourBtn": "Take A Tour",
+		"exploreBtn": "Explore Programs",
+		"courses": "Professional Courses",
+		"graduates": "Graduates",
+		"years": "Years of Excellence",
+		"countries": "Global Reach",
 		"title": "Welcome to LISA College",
 		"subtitle": "Excellence in Beauty & Fashion Education. Transform Your Passion into a Career.",
-		"exploreBtn": "Explore Programs",
 		"learnBtn": "Learn More"
 	},
 	"programs": {

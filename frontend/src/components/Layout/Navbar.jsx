@@ -1,11 +1,20 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Search, ShoppingBag, User, Globe } from "lucide-react";
+import {
+	Menu,
+	X,
+	Search,
+	ShoppingBag,
+	User,
+	Globe,
+	ChevronDown,
+} from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../hooks/useLanguage";
 
 export default function Navbar() {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
 	const { t } = useTranslation();
 	const { changeLanguage, currentLanguage } = useLanguage();
 
@@ -88,37 +97,78 @@ export default function Navbar() {
 							<User size={20} />
 						</button>
 
-						{/* Language Switcher */}
-						<div className="flex items-center space-x-2 ml-2 pl-2 border-l border-gray-400 border-opacity-50">
+						{/* Language Dropdown */}
+						<div className="relative ml-2 pl-2 border-l border-gray-400 border-opacity-50">
 							<button
-								onClick={() => changeLanguage("en")}
+								onClick={() =>
+									setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
+								}
 								className={`px-3 py-2 rounded-lg font-medium transition-colors flex items-center space-x-1 ${
-									currentLanguage === "en"
-										? isScrolled
-											? "bg-purple-100 text-purple-700"
-											: "bg-white bg-opacity-20 text-white"
-										: isScrolled
-											? "text-gray-700 hover:bg-gray-100"
-											: "text-white hover:bg-white hover:bg-opacity-10"
+									isScrolled
+										? "text-gray-700 hover:bg-gray-100"
+										: "text-white hover:bg-white hover:bg-opacity-10"
 								}`}>
-								<Globe size={16} />
-								<span>EN</span>
+								{currentLanguage === "en" ? (
+									<>
+										<Globe size={16} />
+										<span>EN</span>
+									</>
+								) : (
+									<>
+										<span className="text-lg">🇹🇿</span>
+										<span>SW</span>
+									</>
+								)}
+								<ChevronDown size={16} />
 							</button>
-							<button
-								onClick={() => changeLanguage("sw")}
-								className={`px-3 py-2 rounded-lg font-medium transition-colors flex items-center space-x-1 ${
-									currentLanguage === "sw"
-										? isScrolled
-											? "bg-purple-100 text-purple-700"
-											: "bg-white bg-opacity-20 text-white"
-										: isScrolled
-											? "text-gray-700 hover:bg-gray-100"
-											: "text-white hover:bg-white hover:bg-opacity-10"
-								}`}>
-								<span className="text-lg">🇹🇿</span>
-								<span>SW</span>
-							</button>
+
+							{/* Dropdown Menu */}
+							{isLanguageDropdownOpen && (
+								<div
+									className={`absolute right-0 mt-2 w-40 rounded-lg shadow-lg z-50 ${
+										isScrolled ? "bg-white" : "bg-gray-900"
+									}`}>
+									<button
+										onClick={() => {
+											changeLanguage("en");
+											setIsLanguageDropdownOpen(false);
+										}}
+										className={`w-full text-left px-4 py-3 flex items-center space-x-2 transition-colors ${
+											currentLanguage === "en"
+												? isScrolled
+													? "bg-purple-100 text-purple-700"
+													: "bg-purple-700 text-white"
+												: isScrolled
+													? "text-gray-700 hover:bg-gray-100"
+													: "text-white hover:bg-gray-800"
+										}`}>
+										<Globe size={18} />
+										<span className="font-medium">English</span>
+									</button>
+									<button
+										onClick={() => {
+											changeLanguage("sw");
+											setIsLanguageDropdownOpen(false);
+										}}
+										className={`w-full text-left px-4 py-3 flex items-center space-x-2 transition-colors border-t ${
+											currentLanguage === "sw"
+												? isScrolled
+													? "bg-purple-100 text-purple-700 border-purple-200"
+													: "bg-purple-700 text-white border-purple-600"
+												: isScrolled
+													? "text-gray-700 hover:bg-gray-100 border-gray-200"
+													: "text-white hover:bg-gray-800 border-gray-700"
+										}`}>
+										<span className="text-lg">🇹🇿</span>
+										<span className="font-medium">Swahili</span>
+									</button>
+								</div>
+							)}
 						</div>
+					</div>
+
+					{/* Mobile Menu Button */}
+					<div className="md:hidden">
 						<button
 							onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 							className={`p-2 rounded-lg transition-colors ${
@@ -139,7 +189,7 @@ export default function Navbar() {
 						}`}>
 						{navLinks.map((link) => (
 							<a
-								key={link.label}
+								key={link.key}
 								href={link.href}
 								className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
 									isScrolled
@@ -149,6 +199,77 @@ export default function Navbar() {
 								{link.label}
 							</a>
 						))}
+						{/* Mobile Language Dropdown */}
+						<div className="px-3 py-4 border-t mt-4 border-gray-400 border-opacity-50">
+							<button
+								onClick={() =>
+									setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
+								}
+								className={`w-full px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-between ${
+									isScrolled
+										? "text-gray-700 hover:bg-gray-100"
+										: "text-white hover:bg-white hover:bg-opacity-10"
+								}`}>
+								<div className="flex items-center space-x-2">
+									{currentLanguage === "en" ? (
+										<>
+											<Globe size={18} />
+											<span>English</span>
+										</>
+									) : (
+										<>
+											<span className="text-lg">🇹🇿</span>
+											<span>Swahili</span>
+										</>
+									)}
+								</div>
+								<ChevronDown
+									size={16}
+									className={`transition-transform ${isLanguageDropdownOpen ? "rotate-180" : ""}`}
+								/>
+							</button>
+
+							{/* Mobile Dropdown Menu */}
+							{isLanguageDropdownOpen && (
+								<div
+									className={`mt-2 rounded-lg overflow-hidden ${isScrolled ? "bg-gray-50" : "bg-gray-800"}`}>
+									<button
+										onClick={() => {
+											changeLanguage("en");
+											setIsLanguageDropdownOpen(false);
+										}}
+										className={`w-full text-left px-4 py-3 flex items-center space-x-2 transition-colors ${
+											currentLanguage === "en"
+												? isScrolled
+													? "bg-purple-100 text-purple-700"
+													: "bg-purple-700 text-white"
+												: isScrolled
+													? "text-gray-700 hover:bg-gray-100"
+													: "text-white hover:bg-gray-700"
+										}`}>
+										<Globe size={18} />
+										<span className="font-medium">English</span>
+									</button>
+									<button
+										onClick={() => {
+											changeLanguage("sw");
+											setIsLanguageDropdownOpen(false);
+										}}
+										className={`w-full text-left px-4 py-3 flex items-center space-x-2 transition-colors border-t ${
+											currentLanguage === "sw"
+												? isScrolled
+													? "bg-purple-100 text-purple-700 border-purple-200"
+													: "bg-purple-700 text-white border-purple-600"
+												: isScrolled
+													? "text-gray-700 hover:bg-gray-100 border-gray-200"
+													: "text-white hover:bg-gray-700 border-gray-600"
+										}`}>
+										<span className="text-lg">🇹🇿</span>
+										<span className="font-medium">Swahili</span>
+									</button>
+								</div>
+							)}
+						</div>
 					</div>
 				)}
 			</div>

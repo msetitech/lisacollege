@@ -9,9 +9,16 @@
 		"contact": "Wasiliana"
 	},
 	"hero": {
+		"mainTitle": "LISA COLLEGE – Kozi za Mafunzo ya Ufundi",
+		"mainSubtitle": "Mafunzo ya kitaalamu ya Urembo, Mitindo ya Mavazi na Stadi za Kujiajiri\n\nLISA College inatoa mafunzo ya vitendo yanayolenga kukuza ujuzi wa ajira na ujasiriamali.",
+		"tourBtn": "Tembelea Chuo",
+		"exploreBtn": "Chunguza Programu",
+		"courses": "Kozi za Kitaalamu",
+		"graduates": "Waliohitimu",
+		"years": "Miaka ya Ubora",
+		"countries": "Ulimwengu wa Wanyonge",
 		"title": "Karibu katika LISA College",
 		"subtitle": "Ubora katika Elimu ya Uzuri na Mitindo. Badilisha Shauku Yako kuwa Kazi.",
-		"exploreBtn": "Chunguza Programu",
 		"learnBtn": "Jifunze Zaidi"
 	},
 	"programs": {

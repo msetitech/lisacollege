@@ -41,7 +41,7 @@ export default function Hero() {
 
 	return (
 		<section
-			className="relative w-screen h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
+			className="relative w-screen h-screen bg-cover bg-center bg-no-repeat overflow-visible z-0"
 			style={{
 				backgroundImage: `url(${heroImage})`,
 				height: "100vh",
@@ -50,7 +50,7 @@ export default function Hero() {
 			<div className="absolute inset-0 bg-[#68226A]/65"></div>
 
 			{/* Title & Filter Section at Bottom */}
-			<div className="absolute bottom-8 left-0 right-0 w-full">
+			<div className="absolute bottom-8 left-0 right-0 w-full z-50">
 				{/* Title & Subtitle */}
 				<div className="max-w-6xl mx-auto px-4 py-6 text-center md:text-left">
 					<h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
@@ -62,7 +62,7 @@ export default function Hero() {
 				</div>
 
 				{/* Search & Filter Bar */}
-				<div className="bg-white rounded-lg max-w-6xl mx-auto p-6 shadow-2xl">
+				<div className="bg-white rounded-lg max-w-6xl mx-auto p-6 shadow-2xl -mb-32">
 					{/* Search Input */}
 					<div className="mb-6 flex items-center bg-gray-50 rounded-lg px-4 py-2 border border-gray-200">
 						<Search className="text-gray-400 w-5 h-5 mr-3" />

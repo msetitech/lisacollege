@@ -6,9 +6,9 @@ export default function OwnerMessage() {
 	const { t } = useTranslation();
 
 	return (
-		<section className="py-8 bg-white">
-			<div className="max-w-7xl mx-auto px-4">
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch">
+		<section className="pt-0 pb-8 bg-white relative z-0">
+			<div className="max-w-7xl mx-auto px-8 ">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch min-h-80">
 					{/* Left: Owner Image */}
 					<div className="flex items-center justify-center overflow-hidden h-full">
 						<img

@@ -150,7 +150,7 @@ export default function Testimonials() {
 							</span>
 						</div>
 						<h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-							Wanafunzi wetu
+							Maoni ya Wanafunzi na watu mbalimbali
 							<span className="text-[#EE048B]"> Wanasema Nini</span>
 						</h2>
 					</div>

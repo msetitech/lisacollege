@@ -1,40 +1,43 @@
 import { useTranslation } from "react-i18next";
+import { ArrowRight } from "lucide-react";
 import ownerImage from "../../assets/images/owner.jpeg";
 
 export default function OwnerMessage() {
 	const { t } = useTranslation();
 
 	return (
-		<section className="py-8 md:py-12 bg-gradient-to-r from-white via-[#68226A]/5 to-white">
-			<div className="max-w-6xl mx-auto px-4">
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-center">
-					{/* Owner Image - Left */}
-					<div className="flex justify-center md:justify-start">
-						<div className="w-full max-w-sm rounded-xl overflow-hidden shadow-2xl border-4 border-[#EE048B]/30">
-							<img
-								src={ownerImage}
-								alt="Owner of LISA College"
-								className="w-full h-auto object-cover"
-							/>
-						</div>
+		<section className="py-8 bg-white">
+			<div className="max-w-7xl mx-auto px-4">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-stretch">
+					{/* Left: Owner Image */}
+					<div className="flex items-center justify-center overflow-hidden h-full">
+						<img
+							src={ownerImage}
+							alt="Owner of LISA College"
+							className="w-full h-full object-cover"
+						/>
 					</div>
 
-					{/* Welcome Message - Right */}
-					<div className="text-center md:text-left bg-gradient-to-br from-[#68226A]/10 via-[#EE048B]/5 to-[#FFC107]/5 p-6 md:p-8 rounded-xl border-l-4 border-[#EE048B]">
-						<h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#68226A] via-[#EE048B] to-[#68226A] bg-clip-text text-transparent mb-4">
+					{/* Right: Dark Background with Content */}
+					<div className="bg-[#68226A] px-8 md:px-12 py-7 md:py-10 flex flex-col justify-center">
+						<h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
 							{t("owner.title")}
 						</h2>
-						<p className="text-base md:text-lg text-[#68226A] mb-4 leading-relaxed font-medium">
+						<p className="text-gray-200 text-sm md:text-base leading-relaxed mb-5">
 							{t("owner.message")}
 						</p>
-						<div className="mt-6 pt-4 border-t-2 border-[#EE048B]/40">
-							<p className="font-bold text-lg bg-gradient-to-r from-[#EE048B] to-[#68226A] bg-clip-text text-transparent">
+						<div className="mb-5">
+							<p className="text-base font-bold text-white">
 								{t("owner.name")}
 							</p>
-							<p className="text-[#68226A]/70 font-semibold text-sm">
+							<p className="text-[#FFC107] font-semibold text-xs">
 								{t("owner.position")}
 							</p>
 						</div>
+						<button className="inline-flex items-center gap-2 bg-[#EE048B] hover:bg-[#d60278] text-white font-bold py-2 px-6 rounded-lg transition-all transform hover:scale-105 w-fit text-sm">
+							{t("owner.cta")}
+							<ArrowRight className="w-4 h-4" />
+						</button>
 					</div>
 				</div>
 			</div>

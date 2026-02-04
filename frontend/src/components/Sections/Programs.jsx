@@ -11,6 +11,24 @@ export default function Programs() {
 
 	const GAP = 24; // matches gap-6 (1.5rem = 24px)
 
+	// Update card width based on screen size
+	useEffect(() => {
+		const handleResize = () => {
+			const width = window.innerWidth;
+			if (width < 640) {
+				setCardWidth(width - 48);
+			} else if (width < 1024) {
+				setCardWidth(280);
+			} else {
+				setCardWidth(320);
+			}
+		};
+
+		handleResize();
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
 	const programs = [
 		{
 			id: 1,

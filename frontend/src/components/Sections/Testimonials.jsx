@@ -69,11 +69,16 @@ export default function Testimonials() {
 		},
 	];
 
-	// ── resize observer → compute card width so 2 cards fit perfectly ──
+	// ── resize observer → compute card width so 2 cards fit perfectly on desktop, 1 on mobile ──
 	const recalc = useCallback(() => {
 		if (!scrollRef.current) return;
 		const w = scrollRef.current.clientWidth;
-		setCardWidth((w - GAP) / 2);
+		// Mobile: 1 card, Desktop: 2 cards
+		if (w < 768) {
+			setCardWidth(w);
+		} else {
+			setCardWidth((w - GAP) / 2);
+		}
 	}, []);
 
 	useEffect(() => {
@@ -127,44 +132,43 @@ export default function Testimonials() {
 
 	return (
 		<section
-			className="py-20"
+			className="py-16 md:py-20 relative overflow-hidden"
 			style={{
 				background:
 					"linear-gradient(135deg, #68226A 0%, #4a1650 60%, #3d1245 100%)",
 			}}>
 			{/* subtle decorative circles */}
-			<div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+			<div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-40">
 				<div className="absolute -top-20 -left-20 w-64 h-64 rounded-full border border-white/5" />
 				<div className="absolute -bottom-10 -right-10 w-80 h-80 rounded-full border border-white/5" />
 				<div className="absolute top-1/2 left-1/3 w-40 h-40 rounded-full border border-white/4" />
 			</div>
 
-			<div className="max-w-7xl mx-auto px-6 relative z-10">
+			<div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
 				{/* ── header ── */}
-				<div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
-					<div>
-						<div className="inline-flex items-center gap-2 mb-4">
-							<span className="w-8 h-0.5 bg-[#EE048B]" />
-							<span className="text-[#EE048B] font-bold text-xs uppercase tracking-widest">
-								Mafanikio ya Wanafunzi
-							</span>
-						</div>
-						<h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-							Maoni ya Wanafunzi na watu mbalimbali
-							<span className="text-[#EE048B]"> Wanasema Nini</span>
-						</h2>
+				<div className="mb-12 md:mb-16">
+					<div className="inline-flex items-center gap-2 mb-5">
+						<span className="w-8 h-0.5 bg-[#EE048B]" />
+						<span className="text-[#EE048B] font-bold text-xs uppercase tracking-widest">
+							Mafanikio ya Wanafunzi
+						</span>
 					</div>
-					<p className="text-white/50 max-w-sm text-right text-sm">
+					<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-5">
+						Maoni ya Wanafunzi
+						<br />
+						<span className="text-[#EE048B]">Wanasema Nini</span>
+					</h2>
+					<p className="text-white/40 max-w-2xl text-sm md:text-base leading-relaxed">
 						Sikiliza hadithi za kweli kutoka kwa wahusika wetu waliokamilisha
 						mafunzo na wanafanya kazi vizuri sasa hivi.
 					</p>
 				</div>
 
 				{/* ── two-column layout ── */}
-				<div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+				<div className="grid grid-cols-1 lg:grid-cols-5 gap-5 md:gap-6">
 					{/* ──── LEFT: big featured card ──── */}
 					<div
-						className="lg:col-span-2 bg-white/8 backdrop-blur-sm border border-white/10 rounded-2xl p-7 flex flex-col justify-between"
+						className="lg:col-span-2 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-7 flex flex-col justify-between"
 						style={{ background: "rgba(255,255,255,0.07)" }}>
 						{/* quote icon */}
 						<div>
@@ -181,7 +185,7 @@ export default function Testimonials() {
 							<StarsIcon count={featured.rating} />
 
 							{/* text */}
-							<p className="text-white/80 text-base leading-relaxed mt-4 mb-6">
+							<p className="text-white/80 text-base md:text-lg leading-relaxed mt-4 mb-6">
 								"{featured.text}"
 							</p>
 						</div>
@@ -205,7 +209,7 @@ export default function Testimonials() {
 					</div>
 
 					{/* ──── RIGHT: scrolling carousel ──── */}
-					<div className="lg:col-span-3 flex flex-col gap-5">
+					<div className="lg:col-span-3 flex flex-col gap-4 md:gap-5">
 						<div
 							ref={scrollRef}
 							className="flex overflow-x-hidden"
@@ -271,7 +275,7 @@ export default function Testimonials() {
 						</div>
 
 						{/* ── animated dots ── */}
-						<div className="flex items-center justify-center gap-2.5">
+						<div className="flex items-center justify-center gap-2 md:gap-2.5">
 							{testimonials.map((_, index) => (
 								<button
 									key={index}

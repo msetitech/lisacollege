@@ -111,6 +111,14 @@
 		"test2": "Programu ya muundo wa mitindo ni ya ajabu. Waalimu ni wataalamu wa kiwanda walionionesha kila kitu ninachohitaji jua kuarbeji na tarakimu za ziada wa kusambaza.",
 		"test3": "Kutokana na sifuri ya uzoefu hadi kwa kusambaza salon yangu ndani ya miezi 10. Mtaala wa LISA College na msaada uliweza kuundwa."
 	},
+	"blogs": {
+		"label": "Habari Mpya",
+		"title": "Habari na Maarifa",
+		"subtitle": "Soma hadithi za mafanikio, vidokezo vya kitaalamu, na maamuzi ya najis.",
+		"readMore": "Soma Zaidi",
+		"viewAll": "Angalia Habari Zote",
+		"category": "Kategoria"
+	},
 	"cta": {
 		"title": "Jandilizika kuanza safari yako?",
 		"subtitle": "Kubeli na marafiki wanasambaza na kusambaza shauku yao kuwa kazi yenye mafaniko. Jiandikishe sasa na kupokea punguzo maalum kwa usajili wa mapema.",

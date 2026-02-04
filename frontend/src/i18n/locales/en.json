@@ -111,6 +111,14 @@
 		"test2": "The fashion design program is incredible. The instructors are industry professionals who taught me everything I needed to know to work with top fashion brands.",
 		"test3": "From zero experience to opening my own salon in just 10 months. LISA College's curriculum and support made it all possible."
 	},
+	"blogs": {
+		"label": "Latest News",
+		"title": "Recent Blogs & Insights",
+		"subtitle": "Discover success stories, expert tips, and industry insights.",
+		"readMore": "Read More",
+		"viewAll": "View All Articles",
+		"category": "Category"
+	},
 	"cta": {
 		"title": "Ready to Start Your Journey?",
 		"subtitle": "Join hundreds of students who have transformed their passion into a successful career. Enroll now and get special discounts for early registrations.",

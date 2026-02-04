@@ -9,6 +9,7 @@ import Testimonials from "../../components/Sections/Testimonials";
 import Contact from "../../components/Sections/Contact";
 import CTA from "../../components/Sections/CTA";
 import HelpChat from "../../components/Common/HelpChat";
+import RecentBlogs from "../../components/Sections/RecentBlogs";
 
 export default function Home() {
 	return (
@@ -18,6 +19,7 @@ export default function Home() {
 			<About />
 			<Programs />
 			<Stats />
+			<RecentBlogs />
 			<Gallery />
 			<Environment />
 			<Testimonials />

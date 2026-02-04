@@ -22,16 +22,16 @@ export default function Footer() {
 							students with skills and confidence.
 						</p>
 						<div className="flex space-x-4">
-							<a href="#" className="hover:text-purple-400 transition-colors">
+							<a href="#" className="hover:text-[#EE048B] transition-colors">
 								<Facebook size={20} />
 							</a>
-							<a href="#" className="hover:text-purple-400 transition-colors">
+							<a href="#" className="hover:text-[#EE048B] transition-colors">
 								<Instagram size={20} />
 							</a>
-							<a href="#" className="hover:text-purple-400 transition-colors">
+							<a href="#" className="hover:text-[#EE048B] transition-colors">
 								<Twitter size={20} />
 							</a>
-							<a href="#" className="hover:text-purple-400 transition-colors">
+							<a href="#" className="hover:text-[#EE048B] transition-colors">
 								<Linkedin size={20} />
 							</a>
 						</div>
@@ -132,27 +132,43 @@ export default function Footer() {
 							<li className="flex items-start space-x-3">
 								<MapPin
 									size={20}
-									className="text-purple-400 flex-shrink-0 mt-1"
+									className="text-[#EE048B] flex-shrink-0 mt-1"
 								/>
 								<div>
-									<p className="text-gray-400">123 Fashion Street</p>
-									<p className="text-gray-400">New York, NY 10001</p>
+									<p className="text-gray-400">Tabata Kinyerezi</p>
+									<p className="text-gray-400">Mwisho Songas, Dar es Salaam</p>
 								</div>
 							</li>
 							<li className="flex items-center space-x-3">
-								<Phone size={20} className="text-purple-400" />
+								<Phone size={20} className="text-[#EE048B]" />
 								<a
-									href="tel:+1234567890"
+									href="tel:+255763493716"
 									className="text-gray-400 hover:text-white transition-colors">
-									+1 (234) 567-890
+									+255 763 493 716
 								</a>
 							</li>
 							<li className="flex items-center space-x-3">
-								<Mail size={20} className="text-purple-400" />
+								<Phone size={20} className="text-[#EE048B]" />
+								<a
+									href="tel:+255654806567"
+									className="text-gray-400 hover:text-white transition-colors">
+									+255 654 806 567
+								</a>
+							</li>
+							<li className="flex items-center space-x-3">
+								<Mail size={20} className="text-[#EE048B]" />
 								<a
 									href="mailto:info@lisacollege.com"
 									className="text-gray-400 hover:text-white transition-colors">
 									info@lisacollege.com
+								</a>
+							</li>
+							<li className="flex items-center space-x-3">
+								<Instagram size={20} className="text-[#EE048B]" />
+								<a
+									href="https://instagram.com/lisa-college"
+									className="text-gray-400 hover:text-white transition-colors">
+									@lisa-college
 								</a>
 							</li>
 						</ul>

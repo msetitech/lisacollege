@@ -10,6 +10,7 @@ import Contact from "../../components/Sections/Contact";
 import CTA from "../../components/Sections/CTA";
 import HelpChat from "../../components/Common/HelpChat";
 import RecentBlogs from "../../components/Sections/RecentBlogs";
+import Events from "../../components/Sections/Events";
 
 export default function Home() {
 	return (
@@ -23,6 +24,7 @@ export default function Home() {
 			<Gallery />
 			<Environment />
 			<Testimonials />
+			<Events />
 			<Contact />
 			<CTA />
 			<HelpChat />

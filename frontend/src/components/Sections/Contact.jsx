@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
 import { useState } from "react";
+import locationImage from "../../assets/images/location.png";
 
 export default function Contact() {
 	const { i18n } = useTranslation();
@@ -25,16 +26,16 @@ export default function Contact() {
 	const contactInfo = [
 		{
 			icon: MapPin,
-			title_en: "Address",
-			title_sw: "Anwani",
-			details: ["123 Fashion Street", "Dar es Salaam, Tanzania"],
+			title_en: "Location",
+			title_sw: "Mahali",
+			details: ["Tabata Kinyerezi", "Mwisho Songas, Dar es Salaam"],
 			color: "from-blue-500 to-blue-600",
 		},
 		{
 			icon: Phone,
 			title_en: "Phone",
 			title_sw: "Simu",
-			details: ["+255 (22) 123-4567", "+255 (67) 123-4567"],
+			details: ["+255 763 493 716", "+255 654 806 567"],
 			color: "from-green-500 to-green-600",
 		},
 		{
@@ -45,16 +46,16 @@ export default function Contact() {
 			color: "from-pink-500 to-rose-600",
 		},
 		{
-			icon: Clock,
-			title_en: "Hours",
-			title_sw: "Wakat wa Kufungua",
-			details: ["Mon - Fri: 8am - 5pm", "Sat: 9am - 2pm"],
-			color: "from-orange-500 to-orange-600",
+			icon: Instagram,
+			title_en: "Instagram",
+			title_sw: "Instagram",
+			details: ["@lisa-college", "Follow us for updates"],
+			color: "from-purple-500 to-pink-600",
 		},
 	];
 
 	return (
-		<section className="py-20 bg-white">
+		<section className="py-20 bg-gradient-to-b from-white to-gray-50">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				{/* Header */}
 				<div className="text-center mb-12">
@@ -70,38 +71,54 @@ export default function Contact() {
 
 				{/* Main Layout - 2 Columns */}
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-					{/* Left Side - Contact Info Cards */}
-					<div className="space-y-4">
-						{contactInfo.map((info, idx) => {
-							const Icon = info.icon;
-							return (
-								<div
-									key={idx}
-									className="bg-white rounded-lg shadow-md p-6 border-l-4 border-[#EE048B]">
-									<div className="flex items-start gap-4">
-										{/* Icon */}
-										<div
-											className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br ${info.color} flex-shrink-0 mt-1`}>
-											<Icon className="w-6 h-6 text-white" />
-										</div>
+					{/* Left Side - Background Image with Info Cards */}
+					<div className="relative rounded-2xl overflow-hidden shadow-2xl h-full min-h-[600px] lg:min-h-[700px]">
+						{/* Background Image - Pure White */}
+						<img
+							src={locationImage}
+							alt="World Location"
+							className="absolute inset-0 w-full h-full object-cover brightness-200 contrast-200 grayscale"
+						/>
 
-										{/* Content */}
-										<div>
-											<h3 className="font-bold text-gray-900 mb-2">
-												{i18n.language === "sw" ? info.title_sw : info.title_en}
-											</h3>
-											<div className="space-y-1">
-												{info.details.map((detail, i) => (
-													<p key={i} className="text-gray-600 text-sm">
-														{detail}
-													</p>
-												))}
+						{/* Gradient Overlay */}
+						<div className="absolute inset-0 bg-gradient-to-br from-[#EE048B]/70 via-[#68226A]/60 to-[#2D1B4E]/70" />
+
+						{/* Content Cards Overlay */}
+						<div className="absolute inset-0 flex flex-col justify-center p-6 md:p-8 space-y-4">
+							{contactInfo.map((info, idx) => {
+								const Icon = info.icon;
+								return (
+									<div
+										key={idx}
+										className="bg-white/10 backdrop-blur-md border border-white/30 rounded-lg p-4">
+										<div className="flex items-start gap-3">
+											{/* Icon */}
+											<div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-white/30 to-white/10 flex-shrink-0 border border-white/50">
+												<Icon className="w-5 h-5 text-white drop-shadow-lg" />
+											</div>
+
+											{/* Content */}
+											<div>
+												<h3 className="font-bold text-white mb-1 drop-shadow-lg">
+													{i18n.language === "sw"
+														? info.title_sw
+														: info.title_en}
+												</h3>
+												<div className="space-y-1">
+													{info.details.map((detail, i) => (
+														<p
+															key={i}
+															className="text-white/90 text-sm drop-shadow">
+															{detail}
+														</p>
+													))}
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							);
-						})}
+								);
+							})}
+						</div>
 					</div>
 
 					{/* Right Side - Contact Form */}

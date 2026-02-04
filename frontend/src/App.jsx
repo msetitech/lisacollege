@@ -6,6 +6,7 @@ import Footer from "./components/Layout/Footer";
 import Home from "./pages/Home";
 import Programs from "./pages/Programs";
 import CourseDetail from "./pages/Programs/CourseDetail";
+import ApplyForm from "./pages/Applying/ApplyForm";
 
 function App() {
 	return (
@@ -21,6 +22,7 @@ function App() {
 							<Route path="/" element={<Home />} />
 							<Route path="/programs" element={<Programs />} />
 							<Route path="/programs/:id" element={<CourseDetail />} />
+							<Route path="/apply/:courseId" element={<ApplyForm />} />
 						</Routes>
 					</main>
 

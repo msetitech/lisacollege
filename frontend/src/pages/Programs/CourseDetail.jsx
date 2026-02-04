@@ -425,7 +425,7 @@ export default function CourseDetail() {
 
 									{/* CTA Button */}
 									<Link
-										to="/contact"
+										to={`/apply/${course.id}`}
 										className="block w-full bg-gradient-to-r from-[#EE048B] to-[#68226A] text-white font-bold py-4 px-6 rounded-xl text-center transition hover:shadow-xl group">
 										<span className="flex items-center justify-center gap-2">
 											{i18n.language === "sw"

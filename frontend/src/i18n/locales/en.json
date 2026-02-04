@@ -117,6 +117,11 @@
 		"applyBtn": "Apply Now",
 		"tourBtn": "Schedule a Tour"
 	},
+	"help": {
+		"title": "Customer Support",
+		"subtitle": "We're here to help",
+		"inputPlaceholder": "Type your message..."
+	},
 	"footer": {
 		"aboutTitle": "LISA COLLEGE",
 		"aboutDesc": "Excellence in beauty and fashion education since 2010. Empowering students with skills and confidence.",

@@ -117,6 +117,11 @@
 		"applyBtn": "Jiandikishe Sasa",
 		"tourBtn": "Jadwalisha Ziyara"
 	},
+	"help": {
+		"title": "Msaada wa Wateja",
+		"subtitle": "Tuko hapa kusaada",
+		"inputPlaceholder": "Andika ujumbe wako..."
+	},
 	"footer": {
 		"aboutTitle": "LISA COLLEGE",
 		"aboutDesc": "Ubora katika elimu ya uzuri na mitindo tangu 2010. Kukamatia wanafunzi wenye ujuzi na ujasiri.",

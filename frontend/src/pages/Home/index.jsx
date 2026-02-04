@@ -5,6 +5,7 @@ import About from "../../components/Sections/About";
 import Testimonials from "../../components/Sections/Testimonials";
 import CTA from "../../components/Sections/CTA";
 import Environment from "../../components/Sections/Environment";
+import HelpChat from "../../components/Common/HelpChat";
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 			<Environment />
 			<Testimonials />
 			<CTA />
+			<HelpChat />
 		</div>
 	);
 }

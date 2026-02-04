@@ -8,26 +8,9 @@ export default function Programs() {
 	const scrollContainerRef = useRef(null);
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [cardWidth, setCardWidth] = useState(320);
+	const [cardsToShow, setCardsToShow] = useState(3);
 
 	const GAP = 24; // matches gap-6 (1.5rem = 24px)
-
-	// Update card width based on screen size
-	useEffect(() => {
-		const handleResize = () => {
-			const width = window.innerWidth;
-			if (width < 640) {
-				setCardWidth(width - 48);
-			} else if (width < 1024) {
-				setCardWidth(280);
-			} else {
-				setCardWidth(320);
-			}
-		};
-
-		handleResize();
-		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
 
 	const programs = [
 		{
@@ -167,17 +150,28 @@ export default function Programs() {
 	const getDuration = (program) =>
 		i18n.language === "sw" ? program.duration_sw : program.duration;
 
-	// ── measure container → compute card width so exactly 3 fit ──
+	// ── measure container → compute card width based on screen size ──
 	const recalc = useCallback(() => {
 		if (!scrollContainerRef.current) return;
 		const containerWidth = scrollContainerRef.current.clientWidth;
-		// 3 cards + 2 gaps fit perfectly
-		const computed = (containerWidth - GAP * 2) / 3;
+
+		// Determine how many cards to show based on screen width
+		let numCards = 3;
+		if (containerWidth < 640) {
+			numCards = 1; // Mobile: 1 card
+		} else if (containerWidth < 1024) {
+			numCards = 2; // Tablet: 2 cards
+		} else {
+			numCards = 3; // Desktop: 3 cards
+		}
+
+		setCardsToShow(numCards);
+		// Calculate card width so exactly numCards fit
+		const computed = (containerWidth - GAP * (numCards - 1)) / numCards;
 		setCardWidth(computed);
 	}, []);
 
 	useEffect(() => {
-		recalc();
 		const observer = new ResizeObserver(recalc);
 		if (scrollContainerRef.current)
 			observer.observe(scrollContainerRef.current);
@@ -198,7 +192,8 @@ export default function Programs() {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setCurrentIndex((prev) => {
-				const next = (prev + 1) % programs.length;
+				const maxIndex = Math.max(0, programs.length - cardsToShow);
+				const next = (prev + 1) % (maxIndex + 1);
 				if (scrollContainerRef.current) {
 					scrollContainerRef.current.scrollTo({
 						left: next * (cardWidth + GAP),
@@ -209,7 +204,7 @@ export default function Programs() {
 			});
 		}, 5000);
 		return () => clearInterval(interval);
-	}, [programs.length, cardWidth]);
+	}, [programs.length, cardWidth, cardsToShow]);
 
 	return (
 		<section className="py-20 bg-white">
@@ -323,34 +318,40 @@ export default function Programs() {
 
 				{/* Dots Navigation */}
 				<div className="flex items-center justify-center gap-2.5 mt-8">
-					{programs.map((_, index) => (
-						<button
-							key={index}
-							onClick={() => scrollToIndex(index)}
-							aria-label={`Go to slide ${index + 1}`}
-							className="relative flex items-center justify-center"
-							style={{
-								width: currentIndex === index ? 32 : 10,
-								height: 10,
-								transition: "width 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-							}}>
-							{/* inactive track */}
-							<span
-								className="absolute inset-0 rounded-full"
-								style={{ backgroundColor: "#E5E7EB" }}
-							/>
-							{/* active fill */}
-							<span
-								className="absolute inset-0 rounded-full"
+					{programs.map((_, index) => {
+						const maxIndex = Math.max(0, programs.length - cardsToShow);
+						if (index > maxIndex) return null;
+
+						return (
+							<button
+								key={index}
+								onClick={() => scrollToIndex(index)}
+								aria-label={`Go to slide ${index + 1}`}
+								className="relative flex items-center justify-center"
 								style={{
-									backgroundColor: "#EE048B",
-									transform: currentIndex === index ? "scaleX(1)" : "scaleX(0)",
-									transformOrigin: "left",
-									transition: "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-								}}
-							/>
-						</button>
-					))}
+									width: currentIndex === index ? 32 : 10,
+									height: 10,
+									transition: "width 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+								}}>
+								{/* inactive track */}
+								<span
+									className="absolute inset-0 rounded-full"
+									style={{ backgroundColor: "#E5E7EB" }}
+								/>
+								{/* active fill */}
+								<span
+									className="absolute inset-0 rounded-full"
+									style={{
+										backgroundColor: "#EE048B",
+										transform:
+											currentIndex === index ? "scaleX(1)" : "scaleX(0)",
+										transformOrigin: "left",
+										transition: "transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
+									}}
+								/>
+							</button>
+						);
+					})}
 				</div>
 			</div>
 		</section>

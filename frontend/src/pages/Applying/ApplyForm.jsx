@@ -13,6 +13,8 @@ import {
 	CheckCircle,
 	Home,
 	Clock,
+	DollarSign,
+	Award,
 } from "lucide-react";
 import { coursesData } from "../Programs/coursesData";
 
@@ -162,18 +164,77 @@ export default function ApplyForm() {
 		: course.fee;
 
 	return (
-		<div className="min-h-screen bg-gray-50 py-16">
-			<div className="max-w-4xl mx-auto px-4 md:px-6">
-				<Link
-					to={`/programs/${courseId}`}
-					className="inline-flex items-center gap-2 text-[#EE048B] hover:text-[#68226A] font-semibold mb-8 transition group">
-					<ArrowLeft
-						size={20}
-						className="group-hover:-translate-x-1 transition-transform"
-					/>
-					{i18n.language === "sw" ? "Rudi nyuma" : "Back"}
-				</Link>
+		<div className="min-h-screen bg-gray-50 ">
+			<section className=" py-16 relative bg-gradient-to-br from-[#68226A] via-[#4a1650] to-[#3d1245] overflow-hidden">
+				{/* Decorative elements */}
+				<div className="absolute inset-0 opacity-10 pointer-events-none">
+					<div className="absolute top-0 right-0 w-96 h-96 bg-[#EE048B] rounded-full blur-3xl" />
+					<div className="absolute bottom-0 left-0 w-80 h-80 bg-[#FFC107] rounded-full blur-3xl" />
+				</div>
 
+				<div className="relative max-w-4xl mx-auto px-4 md:px-6 py-16 text-center">
+					{/* Back button */}
+					<Link
+						to={`/programs/${courseId}`}
+						className="inline-flex items-center gap-2 text-white/70 hover:text-white font-semibold mb-6 transition group">
+						<ArrowLeft
+							size={20}
+							className="group-hover:-translate-x-1 transition-transform"
+						/>
+						{i18n.language === "sw" ? "Rudi nyuma" : "Back to Course"}
+					</Link>
+
+					{/* Title */}
+					<h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+						{i18n.language === "sw" ? "Fomu ya Maombi" : "Application Form"}
+					</h1>
+
+					{/* Subtitle / Course Name */}
+					<p className="text-lg text-white/70">
+						<span className="font-semibold">
+							{i18n.language === "sw" ? course.name_sw : course.name_en}
+						</span>{" "}
+						{i18n.language === "sw"
+							? "– Jaza fomu hii ili kujiunga na kozi"
+							: "– Fill this form to apply for the course"}
+					</p>
+
+					{/* Quick stats */}
+					<div className="mt-8 grid grid-cols-3 gap-4 justify-center">
+						<div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+							<Clock size={24} className="text-[#EE048B] mb-2" />
+							<p className="text-2xl font-bold text-white">{course.duration}</p>
+							<p className="text-white/60 text-sm">
+								{course.duration === 1
+									? i18n.language === "sw"
+										? "Mwezi"
+										: "Month"
+									: i18n.language === "sw"
+										? "Miezi"
+										: "Months"}
+							</p>
+						</div>
+						<div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+							<DollarSign size={24} className="text-[#FFC107] mb-2" />
+							<p className="text-2xl font-bold text-white">
+								{(course.fee / 1000).toFixed(0)}k
+							</p>
+							<p className="text-white/60 text-sm">
+								{i18n.language === "sw" ? "Bei" : "Fee"}
+							</p>
+						</div>
+						<div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+							<Award size={24} className="text-[#EE048B] mb-2" />
+							<p className="text-2xl font-bold text-white">100%</p>
+							<p className="text-white/60 text-sm">
+								{i18n.language === "sw" ? "Vitendo" : "Practical"}
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div className="max-w-4xl mx-auto px-4 md:px-6 py-16">
 				<div className="text-center mb-12">
 					<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
 						{i18n.language === "sw" ? "Fomu ya Maombi" : "Application Form"}

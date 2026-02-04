@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
 	Menu,
 	X,
@@ -41,9 +41,7 @@ export default function Navbar() {
 	return (
 		<nav
 			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-				isScrolled
-					? "bg-white shadow-lg py-2"
-					: "bg-gradient-to-r from-[#EE048B] to-[#68226A] py-4"
+				isScrolled ? "bg-white shadow-lg py-2" : "bg-transparent py-4"
 			}`}>
 			<div className="max-w-6xl mx-auto px-4">
 				<div className="flex items-center justify-between h-16">

@@ -128,13 +128,13 @@ export default function Programs() {
 		<>
 			{/* Hero Section - 100vh gradient */}
 			<section
-				className="min-h-screen flex items-center justify-center relative overflow-hidden"
+				className="relative overflow-hidden pt-32 pb-16"
 				style={{
 					background:
 						"linear-gradient(135deg, #68226A 0%, #4a1650 60%, #3d1245 100%)",
 				}}>
 				{/* Decorative circles */}
-				<div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
+				<div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
 					<div className="absolute -top-20 -left-20 w-96 h-96 rounded-full border border-white/10" />
 					<div className="absolute -bottom-20 -right-20 w-[500px] h-[500px] rounded-full border border-white/10" />
 					<div className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-white/10" />

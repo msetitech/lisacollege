@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "../../hooks/useLanguage";
+import logo from "../../assets/icons/lisalogo.png";
 
 export default function Navbar() {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -45,15 +46,16 @@ export default function Navbar() {
 			}`}>
 			<div className="max-w-6xl mx-auto px-4">
 				<div className="flex items-center justify-between h-16">
-					{/* Logo */}
-					<Link to="/" className="flex items-center">
-						<span
-							className={`text-2xl font-bold ${
-								isScrolled ? "text-gray-900" : "text-white"
-							}`}>
-							LISA COLLEGE
-						</span>
+					<Link to="/" className="flex items-center gap-3">
+						<img
+							src={logo}
+							alt="Lisa College Logo"
+							className={`h-10 w-auto transition-all duration-300 ${
+								isScrolled ? "filter-none" : "brightness-0 invert"
+							}`}
+						/>
 					</Link>
+
 					{/* Desktop Menu */}
 					<div className="hidden md:flex items-center space-x-1">
 						{navLinks.map((link) => (

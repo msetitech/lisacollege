@@ -3,7 +3,7 @@ import { MapPin, Users, Award, ArrowRight } from "lucide-react";
 import courseImage from "../../assets/images/course.png";
 
 export default function Gallery() {
-	const { t, i18n } = useTranslation();
+	const { i18n } = useTranslation();
 
 	const images = [
 		{
@@ -23,8 +23,8 @@ export default function Gallery() {
 			description_en: "Advanced makeup techniques",
 			description_sw: "Mbinu za juu za makeup",
 			colSpan: "lg:col-span-1",
-			rowSpan: "lg:row-span-1",
-			height: "h-48",
+			rowSpan: "lg:row-span-2",
+			height: "h-96",
 		},
 		{
 			id: 3,
@@ -62,7 +62,7 @@ export default function Gallery() {
 			title_sw: "Darasa",
 			description_en: "Modern learning space",
 			description_sw: "Mazingira ya kujifunza",
-			colSpan: "lg:col-span-2",
+			colSpan: "lg:col-span-1",
 			rowSpan: "lg:row-span-1",
 			height: "h-48",
 		},
@@ -81,7 +81,7 @@ export default function Gallery() {
 							</span>
 						</div>
 						<h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-							{i18n.language === "sw" ? "Galerio ya Chuo" : "College Gallery"}
+							{i18n.language === "sw" ? "Gpicha za Chuo" : "College Gallery"}
 						</h2>
 						<p className="text-lg text-gray-600 max-w-2xl">
 							{i18n.language === "sw"

@@ -81,7 +81,7 @@ export default function Gallery() {
 							</span>
 						</div>
 						<h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-							{i18n.language === "sw" ? "Gpicha za Chuo" : "College Gallery"}
+							{i18n.language === "sw" ? "Picha za Chuo" : "College Gallery"}
 						</h2>
 						<p className="text-lg text-gray-600 max-w-2xl">
 							{i18n.language === "sw"

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
 	Menu,
 	X,
@@ -28,13 +29,13 @@ export default function Navbar() {
 	}, []);
 
 	const navLinks = [
-		{ key: "home", label: t("nav.home"), href: "#" },
-		{ key: "programs", label: t("nav.programs"), href: "#" },
-		{ key: "about", label: t("nav.about"), href: "#" },
-		{ key: "gallery", label: t("nav.gallery"), href: "#" },
-		{ key: "events", label: t("nav.events"), href: "#" },
-		{ key: "news", label: t("nav.news"), href: "#" },
-		{ key: "contact", label: t("nav.contact"), href: "#" },
+		{ key: "home", label: t("nav.home"), path: "/" },
+		{ key: "programs", label: t("nav.programs"), path: "/programs" },
+		{ key: "about", label: t("nav.about"), path: "/about" },
+		{ key: "gallery", label: t("nav.gallery"), path: "/gallery" },
+		{ key: "events", label: t("nav.events"), path: "/events" },
+		{ key: "news", label: t("nav.news"), path: "/news" },
+		{ key: "contact", label: t("nav.contact"), path: "/contact" },
 	];
 
 	return (
@@ -45,28 +46,27 @@ export default function Navbar() {
 			<div className="max-w-6xl mx-auto px-4">
 				<div className="flex items-center justify-between h-16">
 					{/* Logo */}
-					<div className="flex items-center">
+					<Link to="/" className="flex items-center">
 						<span
 							className={`text-2xl font-bold ${
 								isScrolled ? "text-gray-900" : "text-white"
 							}`}>
 							LISA COLLEGE
 						</span>
-					</div>
-
+					</Link>
 					{/* Desktop Menu */}
 					<div className="hidden md:flex items-center space-x-1">
 						{navLinks.map((link) => (
-							<a
+							<Link
 								key={link.key}
-								href={link.href}
+								to={link.path}
 								className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
 									isScrolled
 										? "text-gray-700 hover:bg-gray-100"
 										: "text-white hover:bg-white hover:bg-opacity-10"
 								}`}>
 								{link.label}
-							</a>
+							</Link>
 						))}
 					</div>
 
@@ -188,16 +188,17 @@ export default function Navbar() {
 							isScrolled ? "bg-white" : "bg-gray-900 bg-opacity-95"
 						}`}>
 						{navLinks.map((link) => (
-							<a
+							<Link
 								key={link.key}
-								href={link.href}
+								to={link.path}
+								onClick={() => setIsMobileMenuOpen(false)}
 								className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
 									isScrolled
 										? "text-gray-700 hover:bg-gray-100"
 										: "text-white hover:bg-white hover:bg-opacity-10"
 								}`}>
 								{link.label}
-							</a>
+							</Link>
 						))}
 						{/* Mobile Language Dropdown */}
 						<div className="px-3 py-4 border-t mt-4 border-gray-400 border-opacity-50">

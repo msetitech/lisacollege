@@ -1,4 +1,4 @@
-import { Search, Filter, X } from "lucide-react";
+import { Search, Filter, X, Sparkles, Palette } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export default function FilterPanel({
@@ -43,8 +43,17 @@ export default function FilterPanel({
 		}));
 	};
 
+	// Get icon for category
+	const getCategoryIcon = (value) => {
+		return value === "beauty" ? (
+			<Sparkles size={16} className="text-[#EE048B]" />
+		) : (
+			<Palette size={16} className="text-[#68226A]" />
+		);
+	};
+
 	return (
-		<div className="bg-white rounded-lg p-6 sticky top-20 max-h-[calc(100vh-100px)] overflow-y-auto shadow-md">
+		<div className="bg-white rounded-lg p-6 border border-gray-200 max-h-[calc(100vh-120px)] overflow-y-auto">
 			{/* Filter Header */}
 			<div className="flex items-center justify-between mb-6">
 				<div className="flex items-center gap-2">
@@ -106,8 +115,9 @@ export default function FilterPanel({
 								onChange={() => handleCategoryChange(cat.value)}
 								className="w-4 h-4 rounded border-gray-300 text-[#EE048B] accent-[#EE048B]"
 							/>
-							<span className="text-sm text-gray-700">
-								{cat.icon} {i18n.language === "sw" ? cat.sw : cat.en}
+							<span className="flex items-center gap-2 text-sm text-gray-700">
+								{getCategoryIcon(cat.value)}
+								{i18n.language === "sw" ? cat.sw : cat.en}
 							</span>
 						</label>
 					))}

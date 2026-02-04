@@ -26,7 +26,7 @@ export default function CourseCard({ course }) {
 
 	return (
 		<Link to={`/programs/${course.id}`} className="group block h-full">
-			<div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+			<div className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#EE048B] transition-all duration-300 h-full flex flex-col">
 				{/* Header with Category Icon */}
 				<div className="bg-gradient-to-r from-[#EE048B] to-[#68226A] p-4 relative overflow-hidden">
 					<div className="absolute -right-6 -top-6 text-5xl opacity-10">
@@ -117,7 +117,7 @@ export default function CourseCard({ course }) {
 					</div>
 
 					{/* Enroll Button */}
-					<button className="w-full bg-gradient-to-r from-[#EE048B] to-[#68226A] text-white font-bold py-2.5 px-3 rounded-lg hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2 group/btn text-sm">
+					<button className="w-full bg-gradient-to-r from-[#EE048B] to-[#68226A] text-white font-bold py-2.5 px-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group/btn text-sm">
 						{i18n.language === "sw" ? "Jifunze Sasa" : "Enroll Now"}
 						<ArrowRight
 							size={16}

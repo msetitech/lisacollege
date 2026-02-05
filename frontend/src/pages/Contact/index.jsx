@@ -144,7 +144,7 @@ export default function ContactPage() {
 							return (
 								<div
 									key={idx}
-									className="group bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-[#EE048B]">
+									className="group bg-white rounded-xl p-6 shadow-md hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-[#EE048B]">
 									{/* Icon */}
 									<div
 										className={`w-14 h-14 rounded-lg ${info.bgColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -164,9 +164,6 @@ export default function ContactPage() {
 											</p>
 										))}
 									</div>
-
-									{/* Bottom accent bar */}
-									<div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-[#EE048B] to-[#68226A] group-hover:w-full transition-all duration-500 ease-out rounded-b-xl" />
 								</div>
 							);
 						})}
@@ -255,7 +252,7 @@ export default function ContactPage() {
 
 						{/* Right Side - Contact Form */}
 						<div className="lg:col-span-3">
-							<div className="bg-white rounded-xl shadow-xl p-8 border-2 border-gray-100">
+							<div className="bg-white rounded-xl p-8 border-2 border-gray-100">
 								<div className="mb-6">
 									<h3 className="text-3xl font-bold text-gray-900 mb-2">
 										{t("contact.sendMessage")}
@@ -371,7 +368,7 @@ export default function ContactPage() {
 									{/* Submit Button */}
 									<button
 										type="submit"
-										className="w-full bg-gradient-to-r from-[#EE048B] to-[#68226A] hover:from-[#68226A] hover:to-[#EE048B] text-white font-bold py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2">
+										className="w-full bg-gradient-to-r from-[#EE048B] to-[#68226A] hover:from-[#68226A] hover:to-[#EE048B] text-white font-bold py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2">
 										<Send size={20} />
 										{t("contact.form.submit")}
 									</button>

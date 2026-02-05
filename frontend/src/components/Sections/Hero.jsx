@@ -62,7 +62,7 @@ export default function Hero() {
 				</div>
 
 				{/* Search & Filter Bar */}
-				<div className="bg-white rounded-lg max-w-6xl mx-auto p-6 shadow-2xl">
+				<div className="hidden md:block bg-white rounded-lg max-w-6xl mx-auto p-6 shadow-2xl">
 					{/* Search Input */}
 					<div className="mb-6 flex items-center bg-gray-50 rounded-lg px-4 py-2 border border-gray-200">
 						<Search className="text-gray-400 w-5 h-5 mr-3" />

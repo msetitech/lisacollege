@@ -51,21 +51,79 @@
 
 	"about": {
 		"label": "Kuhusu Sisi",
-		"title": "Kuhusu",
-		"titleHighlight": "LISA College",
-		"description1": "Tangu mwaka 2010, LISA College imekuwa kiongozi katika elimu ya uzuri na fashon nchini Tanzania, ikitoa wataalamu wenye ujuzi wa kufanya kazi vizuri duniani kote.",
-		"description2": "Vifaa vyetu vya kisasa, wakufunzi wenye uzoefu, na ushirikiano na viwanda vinahakikisha kwamba kila mwanafunzi anapokea mafunzo ya kisasa na fursa za kweli za kazi.",
-		"highlights": {
-			"curriculum": "Mtaala wa kisasa unaofuata viwango vya viwanda",
-			"training": "Mafunzo ya vitendo na vifaa vya kitaalamu",
-			"career": "Msaada wa kupata kazi na fursa za mafunzo",
-			"certification": "Vyeti vinavyotambuliwa duniani baada ya kukamilisha mafunzo"
+		"heroTitle": "Hadithi Yetu",
+		"heroDescription": "Tunawapa nguvu wanawake na vijana kwa ujuzi wa kitaaluma kwa zaidi ya miaka 14. Tunajitoa kubadilisha maisha kupitia elimu bora katika urembo, mitindo, na ujasiriamali.",
+
+		"ourStory": {
+			"label": "Sisi Ni Nani",
+			"title": "Kubadilisha Maisha Kupitia",
+			"titleHighlight": "Elimu Bora",
+			"description1": "Lisa College Gharama imekuwa mwangaza wa matumaini na mabadiliko Tanzania tangu 2011. Tunafanya kazi ya kutoa mafunzo ya kitaaluma katika urembo, usimamizi wa saluni, ubunifu wa mitindo, na kozi mbalimbali za ujuzi zinazowapa wanafunzi wetu maandalizi ya kazi zenye mafanikio.",
+			"description2": "Dhamira yetu inaenda zaidi ya kufundisha ujuzi – tunakuza ujasiri, tunakuza ujasiriamali, na tunaunda fursa kwa wahitimu wetu kustawi katika nyanja walizozichagua. Kwa wahitimu zaidi ya 2,500 wanaofanya kazi katika nchi 35, tumeonyesha kwamba elimu bora inaweza kubadilisha maisha."
 		},
+
 		"stats": {
 			"years": "Miaka ya Ubora",
-			"graduates": "Wanafunzi Waliohusika",
-			"courses": "Kozi za Kitaalamu",
-			"countries": "Nchi Zilizofika"
+			"graduates": "Wahitimu Wenye Kujivunia",
+			"courses": "Kozi za Kitaaluma",
+			"countries": "Nchi Zilizofikwa"
+		},
+
+		"highlights": {
+			"curriculum": "Mtaala unaofaa kwa sekta ulioundwa na wataalam",
+			"training": "Mafunzo ya vitendo na vifaa vya kisasa",
+			"career": "Usaidizi wa kazi na msaada wa kupata ajira",
+			"certification": "Vyeti vinavyotambuliwa kimataifa"
+		},
+
+		"values": {
+			"label": "Maadili Yetu Muhimu",
+			"title": "Tunachosimama Nacho",
+			"description": "Maadili yetu yanaongoza kila kitu tunachofanya na kuunda uzoefu wa kila mwanafunzi anayeingia milangoni mwetu.",
+			"excellence": {
+				"title": "Ubora",
+				"description": "Tunadumisha viwango vya juu sana katika elimu, tukihakikisha kila mwanafunzi anapata mafunzo ya kiwango cha kimataifa."
+			},
+			"passion": {
+				"title": "Shauku",
+				"description": "Tuna shauku ya kuwapa nguvu watu binafsi na kuwasaidia kugundua uwezo wao."
+			},
+			"innovation": {
+				"title": "Ubunifu",
+				"description": "Tunakaa mbele ya mienendo ya sekta, tukiboresha daima mtaala wetu na mbinu za kufundisha."
+			},
+			"community": {
+				"title": "Jamii",
+				"description": "Tunajenga jamii ya kusaidia ambapo wanafunzi wanakuwa marafiki wa maisha yote na mitandao ya kitaaluma."
+			}
+		},
+
+		"mission": {
+			"title": "Dhamira Yetu",
+			"description": "Kutoa mafunzo ya ufundi yanayopatikana na ya ubora wa juu yanayowapa nguvu wanawake na vijana ujuzi, ujasiri, na fursa zinazohitajika kujenga kazi zenye mafanikio na kubadilisha maisha yao."
+		},
+
+		"vision": {
+			"title": "Dira Yetu",
+			"description": "Kuwa taasisi inayoongoza Afrika Mashariki katika elimu ya urembo, mitindo, na elimu inayotegemea ujuzi, ikitambuliwa kwa kuzalisha wataalam tayari wa sekta wanaochangia ukuaji wa kiuchumi na maendeleo ya kijamii."
+		},
+
+		"whyChooseUs": {
+			"title": "Kwa Nini Uchague Lisa College?",
+			"description": "Sisi ni zaidi ya taasisi ya mafunzo – sisi ni mshirika wako katika mafanikio.",
+			"reason1": "Waalimu wataalam wenye uzoefu wa sekta",
+			"reason2": "Vifaa vya kisasa, vilivyojengwa vizuri vya mafunzo",
+			"reason3": "Mipango ya malipo rahisi na ada za bei nafuu",
+			"reason4": "Malazi ya hostel yanapatikana kwa wanafunzi",
+			"reason5": "Usaidizi wa kupata ajira na mwongozo wa kazi",
+			"reason6": "Vyeti vinavyotambuliwa baada ya kukamilisha"
+		},
+
+		"cta": {
+			"title": "Uko Tayari Kuanza Safari Yako?",
+			"description": "Jiunge na maelfu ya wahitimu wenye mafanikio walioanza kazi zao Lisa College.",
+			"viewCourses": "Angalia Kozi Zetu",
+			"contactUs": "Wasiliana Nasi"
 		}
 	},
 	"environment": {

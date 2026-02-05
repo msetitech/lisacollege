@@ -55,17 +55,78 @@
 		"titleHighlight": "LISA College",
 		"description1": "Since 2010, LISA College has been at the forefront of beauty and fashion education in Tanzania, producing highly skilled professionals who excel in their careers across the globe.",
 		"description2": "Our state-of-the-art facilities, experienced instructors, and strong industry partnerships ensure that every student receives world-class, hands-on training and real career opportunities.",
-		"highlights": {
-			"curriculum": "Contemporary curriculum aligned with industry standards",
-			"training": "Hands-on training with professional equipment",
-			"career": "Career placement assistance and internship opportunities",
-			"certification": "Internationally recognised certifications upon graduation"
+		"heroTitle": "Our Story",
+		"heroDescription": "Empowering women and youth with professional skills for over 14 years. We're committed to transforming lives through quality education in beauty, fashion, and entrepreneurship.",
+		"ourStory": {
+			"label": "Who We Are",
+			"title": "Transforming Lives Through",
+			"titleHighlight": "Quality Education",
+			"description1": "Lisa College Gharama has been a beacon of hope and transformation in Tanzania since 2011. We specialize in providing professional training in beauty, salon management, fashion design, and various skill-based courses that prepare our students for successful careers.",
+			"description2": "Our commitment goes beyond just teaching skills – we nurture confidence, foster entrepreneurship, and create opportunities for our graduates to thrive in their chosen fields. With over 2,500 graduates working across 35 countries, we've proven that quality education can truly transform lives."
 		},
+
 		"stats": {
 			"years": "Years of Excellence",
-			"graduates": "Students Graduated",
+			"graduates": "Proud Graduates",
 			"courses": "Professional Courses",
 			"countries": "Countries Reached"
+		},
+
+		"highlights": {
+			"curriculum": "Industry-relevant curriculum designed by professionals",
+			"training": "Hands-on training with modern equipment and facilities",
+			"career": "Career support and job placement assistance",
+			"certification": "Internationally recognized certifications"
+		},
+
+		"values": {
+			"label": "Our Core Values",
+			"title": "What We Stand For",
+			"description": "Our values guide everything we do and shape the experience of every student who walks through our doors.",
+			"excellence": {
+				"title": "Excellence",
+				"description": "We maintain the highest standards in education, ensuring every student receives world-class training."
+			},
+			"passion": {
+				"title": "Passion",
+				"description": "We are passionate about empowering individuals and helping them discover their potential."
+			},
+			"innovation": {
+				"title": "Innovation",
+				"description": "We stay ahead of industry trends, constantly updating our curriculum and teaching methods."
+			},
+			"community": {
+				"title": "Community",
+				"description": "We build a supportive community where students become lifelong friends and professional networks."
+			}
+		},
+
+		"mission": {
+			"title": "Our Mission",
+			"description": "To provide accessible, high-quality vocational training that empowers women and youth with the skills, confidence, and opportunities needed to build successful careers and transform their lives."
+		},
+
+		"vision": {
+			"title": "Our Vision",
+			"description": "To be East Africa's leading institution for beauty, fashion, and skill-based education, recognized for producing industry-ready professionals who contribute to economic growth and social development."
+		},
+
+		"whyChooseUs": {
+			"title": "Why Choose Lisa College?",
+			"description": "We're more than just a training institution – we're your partner in success.",
+			"reason1": "Expert instructors with industry experience",
+			"reason2": "Modern, well-equipped training facilities",
+			"reason3": "Flexible payment plans and affordable fees",
+			"reason4": "Hostel accommodation available for students",
+			"reason5": "Job placement support and career guidance",
+			"reason6": "Recognized certificates upon completion"
+		},
+
+		"cta": {
+			"title": "Ready to Start Your Journey?",
+			"description": "Join thousands of successful graduates who started their careers at Lisa College.",
+			"viewCourses": "View Our Courses",
+			"contactUs": "Contact Us"
 		}
 	},
 	"environment": {

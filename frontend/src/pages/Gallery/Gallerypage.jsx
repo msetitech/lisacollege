@@ -285,44 +285,44 @@ export default function GalleryPage() {
 						<div
 							className={
 								viewMode === "masonry"
-									? "columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6"
-									: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+									? "columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8"
+									: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 							}>
 							{filteredImages.map((image, index) => (
 								<div
 									key={image.id}
 									onClick={() => openLightbox(index)}
-									className="group relative overflow-hidden rounded-2xl cursor-pointer break-inside-avoid bg-gray-100"
-									style={viewMode === "masonry" ? {} : { aspectRatio: "4/3" }}>
-									{/* Image */}
-									<img
-										src={image.url}
-										alt={getTitle(image)}
-										className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-									/>
+									className="group relative cursor-pointer break-inside-avoid rounded">
+									{/* Image Frame */}
+									<div className="relative overflow-hidden bg-gray-100 rounded">
+										<img
+											src={image.url}
+											alt={getTitle(image)}
+											className="w-full h-full object-cover transition duration-700 group-hover:scale-[1.06]"
+										/>
 
-									{/* Overlay */}
-									<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-										{/* Zoom Icon */}
-										<div className="absolute top-4 right-4">
-											<div className="bg-white/20 backdrop-blur-sm p-2 rounded-full">
-												<ZoomIn size={20} className="text-white" />
-											</div>
-										</div>
+										{/* Subtle Edge Fade (NOT heavy gradient) */}
+										<div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+									</div>
 
-										{/* Info */}
-										<div className="absolute bottom-0 left-0 right-0 p-6">
-											<h3 className="text-white font-bold text-lg mb-2">
+									{/* Structured Info Panel */}
+									<div className="pt-4 flex items-start justify-between">
+										<div>
+											<h3 className="text-[15px] font-semibold text-gray-900 leading-snug">
 												{getTitle(image)}
 											</h3>
-											<div className="flex items-center gap-3 text-white/80 text-sm">
-												<span className="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full font-medium">
-													{image.category}
-												</span>
-												<span>{image.date}</span>
-											</div>
+											<p className="text-sm text-gray-500 mt-1">
+												{image.category}
+											</p>
 										</div>
+
+										<span className="text-xs text-gray-400 whitespace-nowrap">
+											{image.date}
+										</span>
 									</div>
+
+									{/* Underline Reveal (Premium Interaction) */}
+									<div className="h-[2px] w-0 bg-[#EE048B] mt-3 group-hover:w-full transition-all duration-500" />
 								</div>
 							))}
 						</div>

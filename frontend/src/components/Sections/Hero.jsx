@@ -1,10 +1,19 @@
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown, Search } from "lucide-react";
-import heroImage from "../../assets/images/demolandingimage.jpg";
+
+import img01 from "../../assets/images/01.jpg";
+import img02 from "../../assets/images/02.jpg";
+import img03 from "../../assets/images/03.jpg";
+import img04 from "../../assets/images/04.jpg";
+
+const images = [img01, img02, img03, img04];
 
 export default function Hero() {
 	const { t } = useTranslation();
+	const [currentImage, setCurrentImage] = useState(0);
+	const [scale, setScale] = useState(1);
+
 	const [filters, setFilters] = useState({
 		category: "",
 		duration: "",
@@ -18,7 +27,6 @@ export default function Hero() {
 		"Fashion Design",
 		"Henna",
 	];
-
 	const durations = ["1 Month", "2 Months", "3 Months", "6 Months"];
 	const priceRanges = [
 		"Under 200K",
@@ -36,22 +44,39 @@ export default function Hero() {
 
 	const handleSearch = () => {
 		console.log("Applying filters:", filters);
-		// Will add course filtering logic here
 	};
 
+	// Cycle through images every 8s
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setCurrentImage((prev) => (prev + 1) % images.length);
+			setScale(1); // reset scale
+			setTimeout(() => setScale(1.1), 100); // trigger zoom
+		}, 8000);
+		return () => clearInterval(interval);
+	}, []);
+
+	// Initial zoom effect
+	useEffect(() => {
+		const zoomTimeout = setTimeout(() => setScale(1.1), 100);
+		return () => clearTimeout(zoomTimeout);
+	}, []);
+
 	return (
-		<section
-			className="relative w-screen h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
-			style={{
-				backgroundImage: `url(${heroImage})`,
-				height: "100vh",
-			}}>
+		<section className="relative w-screen h-screen overflow-hidden">
+			{/* Background Image */}
+			<div
+				className="absolute inset-0 bg-center bg-cover transition-transform duration-700 ease-in-out"
+				style={{
+					backgroundImage: `url(${images[currentImage]})`,
+					transform: `scale(${scale})`,
+				}}></div>
+
 			{/* Dark Overlay */}
 			<div className="absolute inset-0 bg-[#68226A]/65"></div>
 
-			{/* Title & Filter Section at Bottom */}
+			{/* Title & Filter Section */}
 			<div className="absolute bottom-8 left-0 right-0 w-full">
-				{/* Title & Subtitle */}
 				<div className="max-w-6xl mx-auto px-4 py-6 text-center md:text-left">
 					<h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
 						{t("hero.mainTitle")}
@@ -61,7 +86,7 @@ export default function Hero() {
 					</p>
 				</div>
 
-				{/* Search & Filter Bar */}
+				{/* Search & Filter Bar (Hidden on Mobile) */}
 				<div className="hidden md:block bg-white rounded-lg max-w-6xl mx-auto p-6 shadow-2xl">
 					{/* Search Input */}
 					<div className="mb-6 flex items-center bg-gray-50 rounded-lg px-4 py-2 border border-gray-200">
@@ -75,7 +100,6 @@ export default function Hero() {
 
 					{/* Filters Grid */}
 					<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
-						{/* Category Filter */}
 						<div>
 							<label className="text-xs font-semibold text-gray-600 block mb-2">
 								{t("hero.filterCategory")}
@@ -93,7 +117,6 @@ export default function Hero() {
 							</select>
 						</div>
 
-						{/* Duration Filter */}
 						<div>
 							<label className="text-xs font-semibold text-gray-600 block mb-2">
 								{t("hero.filterDuration")}
@@ -111,7 +134,6 @@ export default function Hero() {
 							</select>
 						</div>
 
-						{/* Price Filter */}
 						<div>
 							<label className="text-xs font-semibold text-gray-600 block mb-2">
 								{t("hero.filterPrice")}
@@ -129,7 +151,6 @@ export default function Hero() {
 							</select>
 						</div>
 
-						{/* Hostel Toggle */}
 						<div>
 							<label className="text-xs font-semibold text-gray-600 block mb-2">
 								{t("hero.filterHostel")}
@@ -145,7 +166,6 @@ export default function Hero() {
 							</button>
 						</div>
 
-						{/* Apply Button */}
 						<div className="flex items-end">
 							<button
 								onClick={handleSearch}

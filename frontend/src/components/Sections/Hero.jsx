@@ -12,7 +12,6 @@ const images = [img01, img02, img03, img04];
 export default function Hero() {
 	const { t } = useTranslation();
 	const [currentImage, setCurrentImage] = useState(0);
-	const [scale, setScale] = useState(1);
 
 	const [filters, setFilters] = useState({
 		category: "",
@@ -46,30 +45,21 @@ export default function Hero() {
 		console.log("Applying filters:", filters);
 	};
 
-	// Cycle through images every 8s
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setCurrentImage((prev) => (prev + 1) % images.length);
-			setScale(1); // reset scale
-			setTimeout(() => setScale(1.1), 100); // trigger zoom
 		}, 8000);
 		return () => clearInterval(interval);
 	}, []);
-
-	// Initial zoom effect
-	useEffect(() => {
-		const zoomTimeout = setTimeout(() => setScale(1.1), 100);
-		return () => clearTimeout(zoomTimeout);
-	}, []);
-
 	return (
 		<section className="relative w-screen h-screen overflow-hidden">
 			{/* Background Image */}
 			<div
-				className="absolute inset-0 bg-center bg-cover transition-transform duration-700 ease-in-out"
+				key={currentImage} // re-render triggers animation restart
+				className="absolute inset-0 bg-center bg-cover bg-zoom transition-opacity duration-1000 ease-in-out"
 				style={{
 					backgroundImage: `url(${images[currentImage]})`,
-					transform: `scale(${scale})`,
+					opacity: 1,
 				}}></div>
 
 			{/* Dark Overlay */}

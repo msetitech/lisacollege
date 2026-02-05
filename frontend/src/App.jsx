@@ -14,6 +14,7 @@ import BlogsPage from "./pages/News";
 import BlogDetail from "./pages/News/BlogDetail";
 import GalleryPage from "./pages/Gallery/Gallerypage";
 import HelpChat from "./components/Common/HelpChat";
+import ScrollToTop from "./components/Common/ScrollToTop";
 
 function App() {
 	return (
@@ -40,6 +41,7 @@ function App() {
 					</main>
 
 					{/* Footer */}
+					<ScrollToTop />
 					<HelpChat />
 					<Footer />
 				</div>

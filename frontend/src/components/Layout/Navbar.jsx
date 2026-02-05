@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
 	Menu,
 	X,
@@ -16,9 +16,22 @@ import logo from "../../assets/icons/lisalogo.png";
 export default function Navbar() {
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-	const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
+	const [isDesktopLangOpen, setIsDesktopLangOpen] = useState(false);
+	const [isMobileLangOpen, setIsMobileLangOpen] = useState(false);
+
 	const { t } = useTranslation();
 	const { changeLanguage, currentLanguage } = useLanguage();
+	const location = useLocation();
+
+	const closeMobileMenu = () => {
+		setIsMobileMenuOpen(false);
+		setIsMobileLangOpen(false);
+	};
+
+	useEffect(() => {
+		const timer = setTimeout(closeMobileMenu, 0);
+		return () => clearTimeout(timer);
+	}, [location.pathname]);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -28,6 +41,17 @@ export default function Navbar() {
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
+	useEffect(() => {
+		if (isMobileMenuOpen) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "auto";
+		}
+
+		return () => {
+			document.body.style.overflow = "auto";
+		};
+	}, [isMobileMenuOpen]);
 
 	const navLinks = [
 		{ key: "home", label: t("nav.home"), path: "/" },
@@ -102,9 +126,7 @@ export default function Navbar() {
 						{/* Language Dropdown */}
 						<div className="relative ml-2 pl-2 border-l border-gray-400 border-opacity-50">
 							<button
-								onClick={() =>
-									setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
-								}
+								onClick={() => setIsDesktopLangOpen((prev) => !prev)}
 								className={`px-3 py-2 rounded-lg font-medium transition-colors flex items-center space-x-1 ${
 									isScrolled
 										? "text-gray-700 hover:bg-gray-100"
@@ -125,7 +147,7 @@ export default function Navbar() {
 							</button>
 
 							{/* Dropdown Menu */}
-							{isLanguageDropdownOpen && (
+							{isDesktopLangOpen && (
 								<div
 									className={`absolute right-0 mt-2 w-40 rounded-lg shadow-lg z-50 ${
 										isScrolled ? "bg-white" : "bg-gray-900"
@@ -133,7 +155,7 @@ export default function Navbar() {
 									<button
 										onClick={() => {
 											changeLanguage("en");
-											setIsLanguageDropdownOpen(false);
+											setIsDesktopLangOpen(false);
 										}}
 										className={`w-full text-left px-4 py-3 flex items-center space-x-2 transition-colors ${
 											currentLanguage === "en"
@@ -150,7 +172,7 @@ export default function Navbar() {
 									<button
 										onClick={() => {
 											changeLanguage("sw");
-											setIsLanguageDropdownOpen(false);
+											setIsDesktopLangOpen(false);
 										}}
 										className={`w-full text-left px-4 py-3 flex items-center space-x-2 transition-colors border-t ${
 											currentLanguage === "sw"
@@ -187,13 +209,13 @@ export default function Navbar() {
 				{isMobileMenuOpen && (
 					<div
 						className={`md:hidden py-4 ${
-							isScrolled ? "bg-white" : "bg-gray-900 bg-opacity-95"
+							isScrolled ? "bg-white" : "bg-gray-900 bg-opacity-95 rounded-lg"
 						}`}>
 						{navLinks.map((link) => (
 							<Link
 								key={link.key}
 								to={link.path}
-								onClick={() => setIsMobileMenuOpen(false)}
+								onClick={closeMobileMenu}
 								className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
 									isScrolled
 										? "text-gray-700 hover:bg-gray-100"
@@ -205,9 +227,7 @@ export default function Navbar() {
 						{/* Mobile Language Dropdown */}
 						<div className="px-3 py-4 border-t mt-4 border-gray-400 border-opacity-50">
 							<button
-								onClick={() =>
-									setIsLanguageDropdownOpen(!isLanguageDropdownOpen)
-								}
+								onClick={() => setIsMobileLangOpen((prev) => !prev)}
 								className={`w-full px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-between ${
 									isScrolled
 										? "text-gray-700 hover:bg-gray-100"
@@ -228,18 +248,19 @@ export default function Navbar() {
 								</div>
 								<ChevronDown
 									size={16}
-									className={`transition-transform ${isLanguageDropdownOpen ? "rotate-180" : ""}`}
+									className={`transition-transform ${isMobileLangOpen ? "rotate-180" : ""}
+`}
 								/>
 							</button>
 
 							{/* Mobile Dropdown Menu */}
-							{isLanguageDropdownOpen && (
+							{isMobileLangOpen && (
 								<div
 									className={`mt-2 rounded-lg overflow-hidden ${isScrolled ? "bg-gray-50" : "bg-gray-800"}`}>
 									<button
 										onClick={() => {
 											changeLanguage("en");
-											setIsLanguageDropdownOpen(false);
+											closeMobileMenu();
 										}}
 										className={`w-full text-left px-4 py-3 flex items-center space-x-2 transition-colors ${
 											currentLanguage === "en"
@@ -256,7 +277,7 @@ export default function Navbar() {
 									<button
 										onClick={() => {
 											changeLanguage("sw");
-											setIsLanguageDropdownOpen(false);
+											closeMobileMenu();
 										}}
 										className={`w-full text-left px-4 py-3 flex items-center space-x-2 transition-colors border-t ${
 											currentLanguage === "sw"

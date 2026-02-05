@@ -8,7 +8,6 @@ import Environment from "../../components/Sections/Environment";
 import Testimonials from "../../components/Sections/Testimonials";
 import Contact from "../../components/Sections/Contact";
 import CTA from "../../components/Sections/CTA";
-import HelpChat from "../../components/Common/HelpChat";
 import RecentBlogs from "../../components/Sections/RecentBlogs";
 import Events from "../../components/Sections/Events";
 
@@ -27,7 +26,6 @@ export default function Home() {
 			<Events />
 			<Contact />
 			<CTA />
-			<HelpChat />
 		</div>
 	);
 }

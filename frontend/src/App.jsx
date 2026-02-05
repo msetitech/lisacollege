@@ -8,6 +8,7 @@ import Programs from "./pages/Programs";
 import CourseDetail from "./pages/Programs/CourseDetail";
 import ApplyForm from "./pages/Applying/ApplyForm";
 import About from "./pages/About";
+import EventsPage from "./pages/Events";
 
 function App() {
 	return (
@@ -25,6 +26,7 @@ function App() {
 							<Route path="/programs/:id" element={<CourseDetail />} />
 							<Route path="/apply/:courseId" element={<ApplyForm />} />
 							<Route path="/about" element={<About />} />
+							<Route path="/events" element={<EventsPage />} />
 						</Routes>
 					</main>
 

@@ -126,6 +126,31 @@
 			"contactUs": "Wasiliana Nasi"
 		}
 	},
+	"events": {
+		"label": "Matukio na Warsha",
+		"heroTitle": "Matukio Yajayo",
+		"heroDescription": "Jiunge na warsha zetu, madarasa makuu, na matukio maalum yaliyoundwa kuboresha ujuzi wako na kuunganisha na wataalam wa sekta.",
+
+		"nextUp": "Inayofuata",
+		"comingSoon": "Inakuja Mwezi Huu",
+		"viewDetails": "Tazama Maelezo",
+		"register": "Jiandikishe Sasa",
+		"details": "Maelezo",
+		"registered": "Wamejiandikisha",
+		"spotsLeft": "nafasi zimebaki",
+		"free": "BURE",
+
+		"allEventsTitle": "Matukio na Warsha Zote",
+		"searchPlaceholder": "Tafuta matukio...",
+		"showingResults": "Inaonyesha {{showing}} kwa {{total}} matukio",
+		"noEventsFound": "Hakuna matukio yaliyopatikana yanayolingana na vigezo vyako",
+		"clearFilters": "Ondoa Vichujio",
+
+		"cta": {
+			"title": "Una Maswali Kuhusu Matukio Yetu?",
+			"description": "Wasiliana nasi kwa maelezo zaidi kuhusu matukio yajayo na usajili"
+		}
+	},
 	"environment": {
 		"label": "Mazingira Yetu",
 		"title": "Jifunze na Kufanya Kazi katika",

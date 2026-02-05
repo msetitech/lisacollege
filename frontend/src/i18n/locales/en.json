@@ -129,6 +129,31 @@
 			"contactUs": "Contact Us"
 		}
 	},
+	"events": {
+		"label": "Events & Workshops",
+		"heroTitle": "Upcoming Events",
+		"heroDescription": "Join our workshops, masterclasses, and special events designed to enhance your skills and connect with industry professionals.",
+
+		"nextUp": "Next Up",
+		"comingSoon": "Coming Soon This Month",
+		"viewDetails": "View Details",
+		"register": "Register Now",
+		"details": "Details",
+		"registered": "Registered",
+		"spotsLeft": "spots left",
+		"free": "FREE",
+
+		"allEventsTitle": "All Events & Workshops",
+		"searchPlaceholder": "Search events...",
+		"showingResults": "Showing {{showing}} of {{total}} events",
+		"noEventsFound": "No events found matching your criteria",
+		"clearFilters": "Clear Filters",
+
+		"cta": {
+			"title": "Have Questions About Our Events?",
+			"description": "Contact us for more information about upcoming events and registration"
+		}
+	},
 	"environment": {
 		"label": "Our Environment",
 		"title": "Learn & Practise in a",

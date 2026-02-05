@@ -18,7 +18,7 @@ export default function RecentBlogs() {
 			author_en: "Expert Trainer",
 			author_sw: "Mfunzi Mahiri",
 			category: "Hair",
-			featured: true, // This will be the big card
+			featured: true,
 		},
 		{
 			id: 2,

@@ -154,6 +154,73 @@
 			"description": "Contact us for more information about upcoming events and registration"
 		}
 	},
+	"contact": {
+		"label": "Get in Touch",
+		"heroTitle": "Contact Us",
+		"heroDescription": "Have questions about our programs? Want to enroll? We're here to help you start your journey to success.",
+
+		"location": {
+			"title": "Our Location"
+		},
+		"phone": {
+			"title": "Call Us"
+		},
+		"email": {
+			"title": "Email Us"
+		},
+		"hours": {
+			"title": "Office Hours",
+			"weekdays": "Mon - Fri: 8:00 AM - 5:00 PM",
+			"saturday": "Saturday: 9:00 AM - 2:00 PM",
+			"sunday": "Sunday: Closed"
+		},
+
+		"whyContactUs": {
+			"title": "Why Contact Us?",
+			"description": "We're dedicated to helping you find the right program and answering all your questions.",
+			"reason1": "Expert guidance on course selection",
+			"reason2": "Flexible payment plans available",
+			"reason3": "Visit our campus and facilities",
+			"reason4": "Speak with our admissions team"
+		},
+
+		"followUs": "Follow Us on Social Media",
+		"findUs": "Find Us",
+		"mapPlaceholder": "Interactive map coming soon",
+		"openMaps": "Open in Google Maps",
+
+		"sendMessage": "Send Us a Message",
+		"formDescription": "Fill out the form below and we'll get back to you as soon as possible.",
+
+		"form": {
+			"name": "Full Name",
+			"namePlaceholder": "Enter your full name",
+			"email": "Email Address",
+			"emailPlaceholder": "your@email.com",
+			"phone": "Phone Number",
+			"phonePlaceholder": "+255 XXX XXX XXX",
+			"subject": "Subject",
+			"subjectPlaceholder": "What is this regarding?",
+			"message": "Your Message",
+			"messagePlaceholder": "Tell us what you'd like to know...",
+			"submit": "Send Message"
+		},
+
+		"faq": {
+			"title": "Frequently Asked Questions",
+			"description": "Quick answers to common questions",
+			"question1": "What are the admission requirements?",
+			"answer1": "We welcome students who have completed at least primary education. For specific courses, requirements may vary. Contact us for detailed information about your chosen program.",
+			"question2": "Do you offer payment plans?",
+			"answer2": "Yes! We offer flexible payment plans to make education accessible. You can pay in installments, and we accept various payment methods including mobile money and bank transfers.",
+			"question3": "Can I visit the campus before enrolling?",
+			"answer3": "Absolutely! We encourage prospective students to visit our facilities. Contact us to schedule a campus tour and meet our instructors.",
+			"question4": "How long are the courses?",
+			"answer4": "Our courses range from 1 month to 6 months depending on the program. We offer both short courses and comprehensive training programs. Check our Programs page for details.",
+			"moreQuestions": "Still have questions?",
+			"callUs": "Call Us Now"
+		}
+	},
 	"environment": {
 		"label": "Our Environment",
 		"title": "Learn & Practise in a",

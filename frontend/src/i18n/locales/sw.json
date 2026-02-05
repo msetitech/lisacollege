@@ -151,6 +151,73 @@
 			"description": "Wasiliana nasi kwa maelezo zaidi kuhusu matukio yajayo na usajili"
 		}
 	},
+	"contact": {
+		"label": "Wasiliana Nasi",
+		"heroTitle": "Wasiliana Nasi",
+		"heroDescription": "Una maswali kuhusu programu zetu? Unataka kujiandikisha? Tuko hapa kukusaidia kuanza safari yako ya mafanikio.",
+
+		"location": {
+			"title": "Mahali Petu"
+		},
+		"phone": {
+			"title": "Piga Simu"
+		},
+		"email": {
+			"title": "Tuma Barua Pepe"
+		},
+		"hours": {
+			"title": "Masaa ya Ofisi",
+			"weekdays": "Jumatatu - Ijumaa: 8:00 AM - 5:00 PM",
+			"saturday": "Jumamosi: 9:00 AM - 2:00 PM",
+			"sunday": "Jumapili: Imefungwa"
+		},
+
+		"whyContactUs": {
+			"title": "Kwa Nini Uwasiliane Nasi?",
+			"description": "Tumejitolea kukusaidia kupata programu sahihi na kujibu maswali yako yote.",
+			"reason1": "Mwongozo wa kitaalamu juu ya kuchagua kozi",
+			"reason2": "Mipango rahisi ya malipo inapatikana",
+			"reason3": "Tembelea eneo letu na vifaa vyetu",
+			"reason4": "Zungumza na timu yetu ya kuingiza wanafunzi"
+		},
+
+		"followUs": "Tufuate Kwenye Mitandao ya Kijamii",
+		"findUs": "Tupate",
+		"mapPlaceholder": "Ramani ya maingiliano inakuja hivi karibuni",
+		"openMaps": "Fungua katika Ramani za Google",
+
+		"sendMessage": "Tutumie Ujumbe",
+		"formDescription": "Jaza fomu iliyo hapa chini na tutakurudishia majibu haraka iwezekanavyo.",
+
+		"form": {
+			"name": "Jina Kamili",
+			"namePlaceholder": "Ingiza jina lako kamili",
+			"email": "Barua Pepe",
+			"emailPlaceholder": "barua@pepe.com",
+			"phone": "Nambari ya Simu",
+			"phonePlaceholder": "+255 XXX XXX XXX",
+			"subject": "Mada",
+			"subjectPlaceholder": "Hii inahusu nini?",
+			"message": "Ujumbe Wako",
+			"messagePlaceholder": "Tuambie unachotaka kujua...",
+			"submit": "Tuma Ujumbe"
+		},
+
+		"faq": {
+			"title": "Maswali Yanayoulizwa Mara kwa Mara",
+			"description": "Majibu ya haraka kwa maswali ya kawaida",
+			"question1": "Mahitaji ya kuingia ni yapi?",
+			"answer1": "Tunakaribu wanafunzi ambao wamekamilisha angalau elimu ya msingi. Kwa kozi maalum, mahitaji yanaweza kutofautiana. Wasiliana nasi kwa maelezo zaidi kuhusu programu uliyochagua.",
+			"question2": "Je, mnatoa mipango ya malipo?",
+			"answer2": "Ndio! Tunatoa mipango rahisi ya malipo ili kufanya elimu ipatikane. Unaweza kulipa kwa awamu, na tunakubali njia mbalimbali za malipo ikiwa ni pamoja na pesa za simu na uhamisho wa benki.",
+			"question3": "Je, ninaweza kutembelea eneo kabla ya kujiandikisha?",
+			"answer3": "Kabisa! Tunawahimiza wanafunzi watarajiwa kutembelea vifaa vyetu. Wasiliana nasi kuratibu ziara ya eneo na kukutana na waalimu wetu.",
+			"question4": "Kozi zinachukua muda gani?",
+			"answer4": "Kozi zetu zinaanzia mwezi 1 hadi miezi 6 kulingana na programu. Tunatoa kozi fupi na programu kamili za mafunzo. Angalia ukurasa wetu wa Programu kwa maelezo.",
+			"moreQuestions": "Bado una maswali?",
+			"callUs": "Piga Simu Sasa"
+		}
+	},
 	"environment": {
 		"label": "Mazingira Yetu",
 		"title": "Jifunze na Kufanya Kazi katika",

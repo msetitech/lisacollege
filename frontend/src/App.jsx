@@ -9,6 +9,7 @@ import CourseDetail from "./pages/Programs/CourseDetail";
 import ApplyForm from "./pages/Applying/ApplyForm";
 import About from "./pages/About";
 import EventsPage from "./pages/Events";
+import ContactPage from "./pages/Contact";
 
 function App() {
 	return (
@@ -27,6 +28,7 @@ function App() {
 							<Route path="/apply/:courseId" element={<ApplyForm />} />
 							<Route path="/about" element={<About />} />
 							<Route path="/events" element={<EventsPage />} />
+							<Route path="/contact" element={<ContactPage />} />
 						</Routes>
 					</main>
 

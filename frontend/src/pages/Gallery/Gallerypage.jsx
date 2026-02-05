@@ -202,7 +202,7 @@ export default function GalleryPage() {
 					<div className="flex items-center justify-center gap-4 mb-6">
 						<Camera size={56} className="text-[#EE048B]" />
 						<h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
-							{i18n.language === "sw" ? "Galari" : "Gallery"}
+							{i18n.language === "sw" ? "Picha" : "Gallery"}
 						</h1>
 					</div>
 
